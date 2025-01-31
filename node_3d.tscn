@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfm3bsv6ieabt"]
+
+[ext_resource type="PackedScene" uid="uid://6umqp4b06roc" path="res://models/levels/capstone_blockout.glb" id="1_pirud"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="capstone_blockout" parent="." instance=ExtResource("1_pirud")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.666898, 0, 0.34959)
