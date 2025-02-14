@@ -1,16 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dfm3bsv6ieabt"]
+[gd_scene load_steps=3 format=3 uid="uid://dfm3bsv6ieabt"]
 
-[ext_resource type="PackedScene" uid="uid://6umqp4b06roc" path="res://models/levels/capstone_blockout.glb" id="1_pirud"]
+[ext_resource type="PackedScene" uid="uid://csbifysraglbh" path="res://models/levels/capstone_blockout.gltf" id="2_uf42w"]
 [ext_resource type="Script" path="res://player.gd" id="2_xkwne"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1lmhd"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_edil8"]
-
 [node name="Node3D" type="Node3D"]
-
-[node name="capstone_blockout" parent="." instance=ExtResource("1_pirud")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.666898, 0, 0.34959)
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1148, 0)
@@ -21,13 +14,14 @@ script = ExtResource("2_xkwne")
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.650497, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
-shape = SubResource("CapsuleShape3D_1lmhd")
-
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, -8.71093, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("BoxShape3D_edil8")
+[node name="capstone_blockout" parent="StaticBody3D" instance=ExtResource("2_uf42w")]
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0, 0.477754, 0)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.2874, 0)
+light_color = Color(1, 0.647059, 1, 1)
+light_energy = 4.895
+sky_mode = 1
