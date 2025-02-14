@@ -1,7 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://dfm3bsv6ieabt"]
+[gd_scene load_steps=7 format=3 uid="uid://dfm3bsv6ieabt"]
 
 [ext_resource type="PackedScene" uid="uid://csbifysraglbh" path="res://models/levels/capstone_blockout.gltf" id="2_uf42w"]
 [ext_resource type="Script" path="res://player.gd" id="2_xkwne"]
+[ext_resource type="Texture2D" uid="uid://28487qk7fneb" path="res://textures/sky/qwantani_noon_4k.exr" id="3_3awga"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_jbg51"]
+panorama = ExtResource("3_3awga")
+
+[sub_resource type="Sky" id="Sky_slagt"]
+sky_material = SubResource("PanoramaSkyMaterial_jbg51")
+
+[sub_resource type="Environment" id="Environment_ace6r"]
+background_mode = 2
+sky = SubResource("Sky_slagt")
+ssao_enabled = true
+ssao_radius = 1.51
+ssao_intensity = 0.99
+ssao_power = 3.44609
+ssao_detail = 3.03
+ssao_sharpness = 1.0
+ssil_enabled = true
+fog_enabled = true
+fog_sky_affect = 0.421
+adjustment_enabled = true
+adjustment_saturation = 4.09
 
 [node name="Node3D" type="Node3D"]
 
@@ -20,8 +42,5 @@ transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, -8.71093, 0)
 [node name="capstone_blockout" parent="StaticBody3D" instance=ExtResource("2_uf42w")]
 transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0, 0.477754, 0)
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.2874, 0)
-light_color = Color(1, 0.647059, 1, 1)
-light_energy = 4.895
-sky_mode = 1
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ace6r")
