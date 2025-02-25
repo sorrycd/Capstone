@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://6umqp4b06roc"
-path="res://.godot/imported/capstone_blockout.glb-36217a4d18224bf07ddb4eaaebac032b.scn"
+uid="uid://hm4alblyyx7s"
+path="res://.godot/imported/capstone_blockoutv3.glb-62d078ac9989af801c8e6aed03504f99.scn"
 
 [deps]
 
-source_file="res://models/levels/capstone_blockout.glb"
-dest_files=["res://.godot/imported/capstone_blockout.glb-36217a4d18224bf07ddb4eaaebac032b.scn"]
+source_file="res://models/levels/capstone_blockoutv3.glb"
+dest_files=["res://.godot/imported/capstone_blockoutv3.glb-62d078ac9989af801c8e6aed03504f99.scn"]
 
 [params]
 
@@ -33,10 +33,25 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "nodes": {
+"PATH:Cube": {
+"generate/physics": true
+},
+"PATH:Cube_003": {
+"generate/physics": true
+},
 "PATH:Cube_004": {
+"generate/physics": true
+},
+"PATH:Cube_005": {
+"generate/physics": true
+},
+"PATH:Cube_006": {
+"generate/physics": true
+},
+"PATH:Plane": {
 "generate/physics": true
 }
 }
 }
 gltf/naming_version=1
-gltf/embedded_image_handling=2
+gltf/embedded_image_handling=1

@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://dfm3bsv6ieabt"]
+[gd_scene load_steps=6 format=3 uid="uid://bkcd5lldel1x0"]
 
-[ext_resource type="PackedScene" uid="uid://csbifysraglbh" path="res://models/levels/capstone_blockout.gltf" id="2_uf42w"]
-[ext_resource type="Script" path="res://player.gd" id="2_xkwne"]
 [ext_resource type="Texture2D" uid="uid://28487qk7fneb" path="res://textures/sky/qwantani_noon_4k.exr" id="3_3awga"]
+[ext_resource type="PackedScene" uid="uid://c4lccs8l5darl" path="res://addons/godot4.3_fps_character_controller/Player/player.tscn" id="3_o6nvs"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_jbg51"]
 panorama = ExtResource("3_3awga")
@@ -27,20 +26,8 @@ adjustment_saturation = 4.09
 
 [node name="Node3D" type="Node3D"]
 
-[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1148, 0)
-script = ExtResource("2_xkwne")
-
-[node name="Node3D" type="Node3D" parent="CharacterBody3D"]
-
-[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.650497, 0)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, -8.71093, 0)
-
-[node name="capstone_blockout" parent="StaticBody3D" instance=ExtResource("2_uf42w")]
-transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0, 0.477754, 0)
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_ace6r")
+
+[node name="Player" parent="." instance=ExtResource("3_o6nvs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.1148, 0)
