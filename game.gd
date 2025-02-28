@@ -15,7 +15,3 @@ func _input(event: InputEvent) -> void:
 			get_viewport().set_input_as_handled()  
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 			is_mouse_captured = true
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass

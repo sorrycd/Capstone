@@ -244,15 +244,9 @@ script = ExtResource("1_6q6xp")
 environment = SubResource("Environment_hhu3d")
 
 [node name="Player" parent="." instance=ExtResource("2_v5ilv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.92735, 0)
-disable_mode = 1
-slide_on_ceiling = false
-floor_stop_on_slope = false
-floor_constant_speed = true
-floor_block_on_wall = false
-platform_on_leave = 2
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.1148, 0)
 Move_Speed = 4.0
-TiltThreshhold = 0.086
+TiltThreshhold = 0.1
 
 [node name="capstone_blockoutv3" type="Node3D" parent="."]
 
