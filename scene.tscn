@@ -1,7 +1,8 @@
-[gd_scene load_steps=30 format=4 uid="uid://bmla0jfaw6a8c"]
+[gd_scene load_steps=31 format=4 uid="uid://bmla0jfaw6a8c"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_6q6xp"]
 [ext_resource type="PackedScene" uid="uid://c4lccs8l5darl" path="res://addons/godot4.3_fps_character_controller/Player/player.tscn" id="2_v5ilv"]
+[ext_resource type="PackedScene" uid="uid://bvbm2d35a60h7" path="res://models/levels/capstone_blockoutv4.glb" id="3_k4oat"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dx46d"]
 
@@ -240,6 +241,22 @@ data = PackedVector3Array(-1, -1, 11.5883, -2.97558, 1, -11.5883, -2.97558, 1, 1
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_6q6xp")
 
+[node name="SpotLight3D3" type="SpotLight3D" parent="."]
+transform = Transform3D(0.936566, -0.252908, -0.242656, -0.229877, -0.965864, 0.119427, -0.264577, -0.0560702, -0.962733, 7.98616, 14.7924, -8.04032)
+light_color = Color(0.811079, 0.843332, 0.962284, 1)
+light_energy = 2.535
+spot_range = 10.909
+spot_attenuation = 1.2
+spot_angle_attenuation = 0.594604
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="SpotLight3D3"]
+transform = Transform3D(0.967071, -0.00866148, -0.25436, 0.00612386, 0.999923, -0.0107667, 0.254433, 0.0088545, 0.96705, 1.39511, 5.60951, -0.626179)
+light_color = Color(0.811079, 0.843332, 0.962284, 1)
+light_energy = 2.535
+spot_range = 10.909
+spot_attenuation = 1.2
+spot_angle_attenuation = 0.594604
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_hhu3d")
 
@@ -316,15 +333,42 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="capstone_blockoutv3/Cube_003/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_7fvoh")
 
+[node name="capstone_blockoutv4" parent="." instance=ExtResource("3_k4oat")]
+
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.747878, -0.639635, 0.177614, -0.296214, -0.0821039, 0.951586, -0.594085, -0.764282, -0.250872, 0, 15.0518, 0)
 shadow_enabled = true
 directional_shadow_blend_splits = true
 directional_shadow_fade_start = 0.0
 
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.09047, 5.96955, -4.60247)
+[node name="SpotLight3D2" type="SpotLight3D" parent="."]
+transform = Transform3D(0.969638, -0.244541, 0.00139323, 0.0134618, 0.0590647, 0.998163, -0.244174, -0.967838, 0.0605634, 5.37895, 10.6861, 3.40902)
+light_color = Color(0.811079, 0.843332, 0.962284, 1)
+light_energy = 2.535
+spot_range = 10.909
+spot_attenuation = 1.2
+spot_angle_attenuation = 0.594604
 
-[node name="SpotLight3D" type="SpotLight3D" parent="."]
-transform = Transform3D(0.446182, 0, -0.894942, 0, 1, 0, 0.894942, 0, 0.446182, -30.909, 6.055, -3.26633)
-spot_range = 53.836
+[node name="SpotLight3D2" type="SpotLight3D" parent="SpotLight3D2"]
+transform = Transform3D(0.967071, -0.00866148, -0.25436, 0.00612386, 0.999923, -0.0107667, 0.254433, 0.0088545, 0.96705, 1.39511, 5.60951, -0.626179)
+light_color = Color(0.811079, 0.843332, 0.962284, 1)
+light_energy = 2.535
+spot_range = 10.909
+spot_attenuation = 1.2
+spot_angle_attenuation = 0.594604
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="SpotLight3D2/SpotLight3D2"]
+transform = Transform3D(0.961039, 0.0965156, 0.259015, -0.0635609, 0.989111, -0.132734, -0.269005, 0.1111, 0.95671, -6.56733, 4.54589, 1.11558)
+light_color = Color(0.811079, 0.843332, 0.962284, 1)
+light_energy = 2.535
+spot_range = 10.909
+spot_attenuation = 1.2
+spot_angle_attenuation = 0.594604
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="SpotLight3D2/SpotLight3D2/SpotLight3D2"]
+transform = Transform3D(0.994881, 0.0278275, -0.0971443, -0.0315047, 0.998836, -0.0365256, 0.0960148, 0.0393992, 0.9946, -2.20997, -11.2116, 1.89133)
+light_color = Color(0.811079, 0.843332, 0.962284, 1)
+light_energy = 2.535
+spot_range = 10.909
+spot_attenuation = 1.2
+spot_angle_attenuation = 0.594604
