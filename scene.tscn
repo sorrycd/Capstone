@@ -241,6 +241,14 @@ data = PackedVector3Array(-1, -1, 11.5883, -2.97558, 1, -11.5883, -2.97558, 1, 1
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_6q6xp")
 
+[node name="ReflectionProbe" type="ReflectionProbe" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.13434, 0)
+intensity = 0.5
+max_distance = 12.1
+size = Vector3(15.71, 24.269, 20)
+interior = true
+enable_shadows = true
+
 [node name="SpotLight3D3" type="SpotLight3D" parent="."]
 transform = Transform3D(0.936566, -0.252908, -0.242656, -0.229877, -0.965864, 0.119427, -0.264577, -0.0560702, -0.962733, 7.98616, 14.7924, -8.04032)
 light_color = Color(0.811079, 0.843332, 0.962284, 1)
