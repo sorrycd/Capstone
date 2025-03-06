@@ -12,7 +12,7 @@ process_mode = 1
 
 [sub_resource type="Environment" id="Environment_hhu3d"]
 background_mode = 1
-background_color = Color(0.918189, 0.603346, 7.70092e-07, 1)
+background_color = Color(1, 0.822544, 0.603292, 1)
 sky = SubResource("Sky_22qs7")
 ambient_light_source = 2
 ambient_light_color = Color(0.288446, 0.388794, 0.427581, 1)
@@ -44,7 +44,7 @@ environment = SubResource("Environment_hhu3d")
 [node name="capstone_blockoutv5" parent="." instance=ExtResource("2_3253y")]
 
 [node name="Player" parent="." instance=ExtResource("2_v5ilv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.92735, 0)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 4.49053, 0.266698)
 disable_mode = 1
 slide_on_ceiling = false
 floor_stop_on_slope = false
