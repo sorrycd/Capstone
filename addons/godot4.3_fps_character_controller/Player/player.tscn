@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://c4lccs8l5darl"]
 
-[ext_resource type="Script" path="res://addons/godot4.3_fps_character_controller/Player/PlayerLogic.gd" id="1_0ewp1"]
-[ext_resource type="Script" path="res://addons/godot4.3_fps_character_controller/Player/player_inetractcast_logic.gd" id="2_dpr1a"]
+[ext_resource type="Script" uid="uid://b0qka3dncqla5" path="res://addons/godot4.3_fps_character_controller/Player/PlayerLogic.gd" id="1_0ewp1"]
+[ext_resource type="Script" uid="uid://1k41f0324gpa" path="res://addons/godot4.3_fps_character_controller/Player/player_inetractcast_logic.gd" id="2_dpr1a"]
 [ext_resource type="FontFile" uid="uid://6hflm8vkdjoo" path="res://addons/godot4.3_fps_character_controller/Player/Fonts/AmaticSC-Bold.ttf" id="3_8cn8c"]
 [ext_resource type="FontFile" uid="uid://h6o7nvdiwmhl" path="res://addons/godot4.3_fps_character_controller/Player/Fonts/AmaticSC-Regular.ttf" id="4_hqw2h"]
 

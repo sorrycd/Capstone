@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://csxxhstdl4a70"
-path="res://.godot/imported/capstone_blockout2.glb-9e928c46e9050e5a3accea539e17791d.scn"
+uid="uid://iee5sue1unbd"
+path="res://.godot/imported/capstone_blockoutv5.glb-9445991c3024b550eaafad7ccd2c289b.scn"
 
 [deps]
 
-source_file="res://models/levels/capstone_blockout2.glb"
-dest_files=["res://.godot/imported/capstone_blockout2.glb-9e928c46e9050e5a3accea539e17791d.scn"]
+source_file="res://models/levels/capstone_blockoutv5.glb"
+dest_files=["res://.godot/imported/capstone_blockoutv5.glb-9445991c3024b550eaafad7ccd2c289b.scn"]
 
 [params]
 
@@ -34,22 +34,16 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "nodes": {
-"PATH:Cube": {
-"generate/physics": true
-},
-"PATH:Cube_003": {
-"generate/physics": true
-},
 "PATH:Cube_004": {
 "generate/physics": true
 },
 "PATH:Cube_005": {
 "generate/physics": true
 },
-"PATH:Cube_006": {
+"PATH:Plane": {
 "generate/physics": true
 },
-"PATH:Plane": {
+"PATH:Plane_001": {
 "generate/physics": true
 }
 }
