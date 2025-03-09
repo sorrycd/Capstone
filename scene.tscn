@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bmla0jfaw6a8c"]
 
-[ext_resource type="Script" uid="uid://dcw14hfiy2w0v" path="res://game.gd" id="1_6q6xp"]
-[ext_resource type="PackedScene" uid="uid://bli3oyg6mva1j" path="res://models/levels/capstone_blockoutv9.glb" id="2_3253y"]
+[ext_resource type="Script" path="res://game.gd" id="1_6q6xp"]
+[ext_resource type="PackedScene" uid="uid://dlk23x2ba88gn" path="res://models/levels/capstone_blockoutv10.glb" id="2_l0rtd"]
 [ext_resource type="PackedScene" uid="uid://c4lccs8l5darl" path="res://addons/godot4.3_fps_character_controller/Player/player.tscn" id="2_v5ilv"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dx46d"]
@@ -28,12 +28,11 @@ fog_sky_affect = 0.495
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_6q6xp")
 
-[node name="capstone_blockoutv9" parent="." instance=ExtResource("2_3253y")]
+[node name="capstone_blockoutv10" parent="." instance=ExtResource("2_l0rtd")]
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.0607, 6.3977, 0)
 intensity = 0.1
-blend_distance = 0.54
 max_distance = 30.5
 size = Vector3(49.8312, 16.6422, 20)
 interior = true
@@ -63,13 +62,13 @@ directional_shadow_mode = 0
 directional_shadow_max_distance = 32.0
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 9.93072, 0.0136959)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.693119, 9.93072, 0.0136959)
 light_color = Color(1, 0.973495, 0.782796, 1)
 light_energy = 16.0
 light_bake_mode = 1
 spot_range = 40.849
 spot_attenuation = 2.11
-spot_angle = 41.36
+spot_angle = 46.82
 
 [node name="SpotLight3D3" type="SpotLight3D" parent="."]
 transform = Transform3D(0.645445, 3.33871e-08, -0.763807, 0.763807, -2.82133e-08, 0.645445, -1.88812e-15, -1, -4.37114e-08, -22.5163, 8.26414, -0.15667)
