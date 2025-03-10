@@ -31,6 +31,7 @@ class_name Player extends CharacterBody3D
 @onready var camera: Camera3D = $Head/Camera3D
 @onready var ltilt: Marker3D = $Tilt/LTilt
 @onready var rtilt: Marker3D = $Tilt/RTilt
+@onready var flashlight: SpotLight3D = $Head/SpotLight3D
 
 var direction: Vector3 = Vector3.ZERO
 var Camera_Inp: Vector2 = Vector2()
@@ -38,15 +39,26 @@ var Rot_Vel: Vector2 = Vector2()
 var _speed: float = Move_Speed
 var _isMouseCaptured: bool = true
 var can_wall_jump: bool = false
+var flashlight_on = false
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	ltilt.rotation.z = TiltThreshhold
 	rtilt.rotation.z = -TiltThreshhold
+	flashlight.light_energy = 0  # Start OFF without breaking light influence
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		Camera_Inp = event.relative
+		
+	if event.is_action_pressed("toggle_flashlight"):  
+		flashlight_on = !flashlight_on
+		
+		if flashlight_on:
+			flashlight.light_energy = 1.0  # Restore brightness
+		else:
+			flashlight.light_energy = 0  # Turn it "off" without removing influence
+
 
 func _process(delta: float) -> void:
 	_handle_mouse_capture()
