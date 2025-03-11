@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://bmla0jfaw6a8c"]
+[gd_scene load_steps=10 format=3 uid="uid://bmla0jfaw6a8c"]
 
-[ext_resource type="Script" uid="uid://cd2prcmk5k4m0" path="res://game.gd" id="1_6q6xp"]
+[ext_resource type="Script" path="res://game.gd" id="1_6q6xp"]
 [ext_resource type="PackedScene" uid="uid://buoja43rdjb03" path="res://models/levels/capstone_blockoutv11.glb" id="2_3253y"]
-[ext_resource type="Script" uid="uid://ckg0yl2mgx418" path="res://fpscounter.gd" id="2_m7jmp"]
+[ext_resource type="Script" path="res://fpscounter.gd" id="2_m7jmp"]
+[ext_resource type="PackedScene" uid="uid://bggqs6i5fdkmx" path="res://models/levels/pedestal_book.glb" id="2_t4m1h"]
 [ext_resource type="PackedScene" uid="uid://c4lccs8l5darl" path="res://addons/godot4.3_fps_character_controller/Player/player.tscn" id="2_v5ilv"]
 [ext_resource type="LightmapGIData" uid="uid://icioski0a1yf" path="res://scene.lmbake" id="3_u3cyc"]
 
@@ -46,6 +47,12 @@ script = ExtResource("2_m7jmp")
 
 [node name="capstone_blockoutv11" parent="." instance=ExtResource("2_3253y")]
 
+[node name="pedestal_book" parent="capstone_blockoutv11" instance=ExtResource("2_t4m1h")]
+transform = Transform3D(0.505, 0, 0, 0, 0.505, 0, 0, 0, 0.505, -32.8747, 1.37643, 0)
+
+[node name="book closed" parent="capstone_blockoutv11/pedestal_book" index="2"]
+visible = false
+
 [node name="ReflectionProbe" type="ReflectionProbe" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.0607, 6.3977, 0)
 intensity = 0.1
@@ -61,6 +68,7 @@ environment = SubResource("Environment_hhu3d")
 [node name="LightmapGI" type="LightmapGI" parent="."]
 environment_mode = 3
 environment_custom_color = Color(0, 0, 0, 1)
+environment_custom_energy = 1.0
 light_data = ExtResource("3_u3cyc")
 
 [node name="Player" parent="." instance=ExtResource("2_v5ilv")]
@@ -99,18 +107,11 @@ spot_range = 40.849
 spot_attenuation = 2.11
 spot_angle = 46.82
 
-[node name="SpotLight3D3" type="SpotLight3D" parent="DirectionalLight3D"]
-transform = Transform3D(-0.797297, 0.602952, 0.0276982, -0.521793, -0.711592, 0.470499, 0.303398, 0.360674, 0.881966, -14.0707, 24.159, -18.0252)
-light_color = Color(1, 0.977419, 0.80779, 1)
-light_energy = 14.253
-spot_range = 40.849
-spot_attenuation = 2.01
-spot_angle = 20.92
-
 [node name="SpotLight3D4" type="SpotLight3D" parent="DirectionalLight3D"]
 transform = Transform3D(0.642411, 0.423552, -0.63868, -0.668554, 0.717128, -0.196883, 0.374626, 0.553472, 0.743858, -0.927105, 8.66805, -10.2386)
 light_color = Color(0.580392, 0.34902, 0.309804, 1)
 light_energy = 14.253
+light_bake_mode = 1
 spot_range = 40.849
 spot_attenuation = 1.99
 spot_angle = 15.46
@@ -119,6 +120,7 @@ spot_angle = 15.46
 transform = Transform3D(0.642411, 0.423552, -0.63868, -0.668554, 0.717128, -0.196883, 0.374626, 0.553472, 0.743858, 1.2069, 6.37883, -8.90552)
 light_color = Color(0.582194, 0.347264, 0.311476, 1)
 light_energy = 14.253
+light_bake_mode = 1
 spot_range = 40.849
 spot_attenuation = 1.99
 spot_angle = 15.46
@@ -127,6 +129,7 @@ spot_angle = 15.46
 transform = Transform3D(0.642411, 0.423552, -0.63868, -0.668554, 0.717128, -0.196883, 0.374626, 0.553472, 0.743858, -3.13563, 11.0372, -11.6182)
 light_color = Color(0.580392, 0.34902, 0.309804, 1)
 light_energy = 14.253
+light_bake_mode = 1
 spot_range = 40.849
 spot_attenuation = 1.99
 spot_angle = 15.46
@@ -135,6 +138,7 @@ spot_angle = 15.46
 transform = Transform3D(0.877906, 0.423552, 0.223349, -0.174309, 0.717128, -0.674791, -0.445979, 0.553472, 0.7034, -4.56492, 12.8271, -12.8435)
 light_color = Color(1, 0.977419, 0.80779, 1)
 light_energy = 14.253
+light_bake_mode = 1
 spot_range = 40.849
 spot_attenuation = 2.49
 spot_angle = 39.46
@@ -148,12 +152,14 @@ spot_range = 40.849
 spot_attenuation = 1.8
 spot_angle = 34.31
 
-[node name="SpotLight3D9" type="SpotLight3D" parent="DirectionalLight3D"]
-transform = Transform3D(0.469876, 0.423552, 0.774481, 0.348441, 0.717128, -0.603585, -0.811052, 0.553472, 0.189379, -12.0315, 24.9879, -22.7439)
+[node name="SpotLight3D10" type="SpotLight3D" parent="DirectionalLight3D"]
+transform = Transform3D(0.847292, 0.423552, 0.320467, -0.0974749, 0.717128, -0.690091, -0.522106, 0.553472, 0.648903, -11.7387, 21.4215, -18.3469)
 light_color = Color(1, 0.977419, 0.80779, 1)
 light_energy = 14.253
+light_bake_mode = 1
 spot_range = 40.849
-spot_attenuation = 1.8
-spot_angle = 50.98
+spot_attenuation = 1.98
+spot_angle = 37.2
 
+[editable path="capstone_blockoutv11/pedestal_book"]
 [editable path="Player"]
