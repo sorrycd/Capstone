@@ -157,15 +157,6 @@ spot_range = 40.849
 spot_attenuation = 1.2
 spot_angle = 15.46
 
-[node name="SpotLight3D10" type="SpotLight3D" parent="."]
-transform = Transform3D(0.493274, 5.65306e-07, 0.869874, -0.869874, 3.89085e-07, 0.493274, -5.96046e-08, -1, 6.8367e-07, -16.529, 5.91773, -0.156687)
-light_color = Color(1, 0.977419, 0.80779, 1)
-light_energy = 14.253
-light_bake_mode = 1
-spot_range = 765.788
-spot_attenuation = 1.73
-spot_angle = 39.46
-
 [node name="SpotLight3D11" type="SpotLight3D" parent="."]
 transform = Transform3D(0.999728, -4.01714e-08, 0.0233328, -0.0233328, 1.94706e-07, 0.999728, -4.47035e-08, -1, 1.93716e-07, -0.545928, 6.35912, -0.156675)
 light_color = Color(1, 0.977419, 0.80779, 1)
@@ -210,5 +201,14 @@ shadow_enabled = true
 spot_range = 8.278
 spot_attenuation = 2.86
 spot_angle = 47.34
+
+[node name="SpotLight3D15" type="SpotLight3D" parent="."]
+transform = Transform3D(0.395073, 0.525773, 0.753313, -0.438097, -0.612936, 0.657556, 0.807458, -0.589807, -0.0118152, -16.176, 6.07645, -0.145148)
+light_color = Color(1, 0.973495, 0.782796, 1)
+light_energy = 16.0
+shadow_enabled = true
+spot_range = 25.094
+spot_attenuation = 1.65
+spot_angle = 30.14
 
 [editable path="Player"]
