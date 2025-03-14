@@ -1,10 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bkcd5lldel1x0"]
+[gd_scene load_steps=5 format=3 uid="uid://bkcd5lldel1x0"]
 
-[ext_resource type="Texture2D" uid="uid://28487qk7fneb" path="res://textures/sky/qwantani_noon_4k.exr" id="3_3awga"]
 [ext_resource type="PackedScene" uid="uid://c4lccs8l5darl" path="res://addons/godot4.3_fps_character_controller/Player/player.tscn" id="3_o6nvs"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_jbg51"]
-panorama = ExtResource("3_3awga")
 
 [sub_resource type="Sky" id="Sky_slagt"]
 sky_material = SubResource("PanoramaSkyMaterial_jbg51")
