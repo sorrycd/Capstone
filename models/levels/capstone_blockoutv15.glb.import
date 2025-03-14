@@ -34,16 +34,13 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "nodes": {
-"PATH:Plane": {
+"PATH:banner": {
 "generate/physics": true
 },
-"PATH:Plane_001": {
+"PATH:book closed": {
 "generate/physics": true
 },
-"PATH:Plane_003": {
-"generate/physics": true
-},
-"PATH:Plane_004": {
+"PATH:book open": {
 "generate/physics": true
 },
 "PATH:doorway_002": {
@@ -64,7 +61,85 @@ _subresources={
 "PATH:floors_003": {
 "generate/physics": true
 },
+"PATH:frame": {
+"generate/physics": true
+},
+"PATH:frame_001": {
+"generate/physics": true
+},
+"PATH:frame_002": {
+"generate/physics": true
+},
+"PATH:frame_003": {
+"generate/physics": true
+},
+"PATH:outisde-wall": {
+"generate/physics": true
+},
+"PATH:outside-wall2": {
+"generate/physics": true
+},
+"PATH:outside-wall3": {
+"generate/physics": true
+},
+"PATH:outside-wall4": {
+"generate/physics": true
+},
+"PATH:pedestal": {
+"generate/physics": true
+},
+"PATH:pillars_001": {
+"generate/physics": true
+},
+"PATH:pillars_002": {
+"generate/physics": true
+},
+"PATH:pillars_004": {
+"generate/physics": true
+},
+"PATH:pillars_005": {
+"generate/physics": true
+},
+"PATH:pillars_007": {
+"generate/physics": true
+},
+"PATH:pillars_008": {
+"generate/physics": true
+},
+"PATH:pillars_009": {
+"generate/physics": true
+},
+"PATH:pillars_010": {
+"generate/physics": true
+},
+"PATH:roof": {
+"generate/physics": true
+},
+"PATH:roof-hall": {
+"generate/physics": true
+},
+"PATH:roof-picture": {
+"generate/physics": true
+},
+"PATH:roofl-foyer": {
+"generate/physics": true
+},
 "PATH:walls": {
+"generate/physics": true
+},
+"PATH:walls_001": {
+"generate/physics": true
+},
+"PATH:walls_002": {
+"generate/physics": true
+},
+"PATH:walls_003": {
+"generate/physics": true
+},
+"PATH:walls_004": {
+"generate/physics": true
+},
+"PATH:walls_005": {
 "generate/physics": true
 }
 }
