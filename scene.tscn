@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://bmla0jfaw6a8c"]
 
-[ext_resource type="Script" uid="uid://cd2prcmk5k4m0" path="res://game.gd" id="1_6q6xp"]
-[ext_resource type="Script" uid="uid://ckg0yl2mgx418" path="res://fpscounter.gd" id="2_m7jmp"]
+[ext_resource type="Script" path="res://game.gd" id="1_6q6xp"]
+[ext_resource type="Script" path="res://fpscounter.gd" id="2_m7jmp"]
 [ext_resource type="PackedScene" uid="uid://c4lccs8l5darl" path="res://addons/godot4.3_fps_character_controller/Player/player.tscn" id="2_v5ilv"]
 [ext_resource type="PackedScene" uid="uid://b6cbl3qobv7uo" path="res://models/levels/capstone_blockoutv15.glb" id="2_y2354"]
 [ext_resource type="LightmapGIData" uid="uid://icioski0a1yf" path="res://scene.lmbake" id="3_u3cyc"]
@@ -71,10 +71,11 @@ quality = 0
 interior = true
 environment_mode = 3
 environment_custom_color = Color(0, 0, 0, 1)
+environment_custom_energy = 1.0
 light_data = ExtResource("3_u3cyc")
 
 [node name="Player" parent="." instance=ExtResource("2_v5ilv")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 2.03145, -0.0455661)
+transform = Transform3D(-0.0011345, 0, -0.999999, 0, 1, 0, 0.999999, 0, -0.0011345, 0, 2.03145, -0.0455661)
 disable_mode = 1
 slide_on_ceiling = false
 floor_stop_on_slope = false
@@ -123,12 +124,12 @@ spot_angle = 58.51
 
 [node name="SpotLight3D6" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 2.23517e-07, 2.08616e-07, -2.08616e-07, 1.78814e-07, 1, 2.23517e-07, -1, 1.78814e-07, -0.693124, 6.28068, 0.0136886)
-light_color = Color(1, 0.973495, 0.782796, 1)
+light_color = Color(0.934408, 0.777478, 0.470835, 1)
 light_energy = 16.0
 light_bake_mode = 1
 spot_range = 40.849
-spot_attenuation = 2.52
-spot_angle = 52.27
+spot_attenuation = 3.37
+spot_angle = 68.19
 
 [node name="SpotLight3D7" type="SpotLight3D" parent="."]
 transform = Transform3D(0.999728, -3.9825e-08, 0.0233327, -0.0233327, 2.09546e-07, 0.999728, -4.47035e-08, -1, 2.08559e-07, -10.4272, 5.90394, -0.156653)
@@ -157,23 +158,15 @@ spot_range = 40.849
 spot_attenuation = 1.2
 spot_angle = 15.46
 
-[node name="SpotLight3D11" type="SpotLight3D" parent="."]
-transform = Transform3D(0.999728, -4.01714e-08, 0.0233328, -0.0233328, 1.94706e-07, 0.999728, -4.47035e-08, -1, 1.93716e-07, -0.545928, 6.35912, -0.156675)
-light_color = Color(1, 0.977419, 0.80779, 1)
-light_energy = 14.253
-light_bake_mode = 1
-spot_range = 40.849
-spot_attenuation = 1.8
-spot_angle = 34.31
-
 [node name="SpotLight3D12" type="SpotLight3D" parent="."]
-transform = Transform3D(-0.406163, 8.86409e-07, 0.913801, -0.913801, -1.20933e-06, -0.406163, 7.45058e-07, -1, 1.30119e-06, -34.0633, 1.18009, -0.235521)
+transform = Transform3D(-0.383167, 9.16396e-07, 0.923679, -0.923679, -1.18677e-06, -0.383167, 7.45058e-07, -1, 1.30119e-06, -34.5772, 1.18009, -0.235521)
 light_color = Color(1, 0.977419, 0.80779, 1)
 light_energy = 13.505
 light_bake_mode = 1
+shadow_enabled = true
 spot_range = 40.849
 spot_attenuation = 1.6
-spot_angle = 49.93
+spot_angle = 71.75
 
 [node name="SpotLight3D13" type="SpotLight3D" parent="."]
 transform = Transform3D(0.53023, 0.716826, 0.452788, -0.258588, -0.371872, 0.89154, 0.807458, -0.589807, -0.0118152, -36.6865, 6.00608, 7.09069)
