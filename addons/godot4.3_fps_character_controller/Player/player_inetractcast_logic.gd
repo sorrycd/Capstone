@@ -9,7 +9,7 @@ func _physics_process(delta: float) -> void:
 		var collider = get_collider()
 		
 		if collider is Interactable:
-			if collider.prompt_action == "interact":
+			if collider.prompt_action == "Interact":
 				# Prompt Logic
 				if Prompt.text == collider.get_prompt()+ " ["+collider.get_key()+"]":
 					pass
@@ -22,7 +22,7 @@ func _physics_process(delta: float) -> void:
 						collider.run_dialogue()
 
 				elif Input.is_action_just_pressed(collider.prompt_action):
-					collider.interact(owner)
+					collider.Interact(owner)
 				
 
 

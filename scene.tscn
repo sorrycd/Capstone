@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://bmla0jfaw6a8c"]
+[gd_scene load_steps=10 format=3 uid="uid://bmla0jfaw6a8c"]
 
-[ext_resource type="Script" path="res://game.gd" id="1_6q6xp"]
-[ext_resource type="Script" path="res://fpscounter.gd" id="2_m7jmp"]
+[ext_resource type="Script" uid="uid://cd2prcmk5k4m0" path="res://game.gd" id="1_6q6xp"]
+[ext_resource type="Script" uid="uid://ckg0yl2mgx418" path="res://fpscounter.gd" id="2_m7jmp"]
 [ext_resource type="PackedScene" uid="uid://c4lccs8l5darl" path="res://addons/godot4.3_fps_character_controller/Player/player.tscn" id="2_v5ilv"]
 [ext_resource type="PackedScene" uid="uid://b6cbl3qobv7uo" path="res://models/levels/capstone_blockoutv15.glb" id="2_y2354"]
 [ext_resource type="LightmapGIData" uid="uid://icioski0a1yf" path="res://scene.lmbake" id="3_u3cyc"]
+[ext_resource type="Script" uid="uid://dwtu1nysikrud" path="res://addons/godot4.3_fps_character_controller/Player/Interactable.gd" id="3_y2354"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dx46d"]
 
@@ -31,6 +32,9 @@ fog_sky_affect = 0.495
 script = ExtResource("1_6q6xp")
 
 [node name="capstone_blockoutv15" parent="." instance=ExtResource("2_y2354")]
+
+[node name="StaticBody3D" parent="capstone_blockoutv15/book closed" index="0"]
+script = ExtResource("3_y2354")
 
 [node name="ReflectionProbe2" type="ReflectionProbe" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.8628, 5.53633, 24.1246)
@@ -71,7 +75,6 @@ quality = 0
 interior = true
 environment_mode = 3
 environment_custom_color = Color(0, 0, 0, 1)
-environment_custom_energy = 1.0
 light_data = ExtResource("3_u3cyc")
 
 [node name="Player" parent="." instance=ExtResource("2_v5ilv")]
@@ -123,12 +126,12 @@ spot_attenuation = 1.31
 spot_angle = 58.51
 
 [node name="SpotLight3D6" type="SpotLight3D" parent="."]
-transform = Transform3D(1, 2.23517e-07, 2.08616e-07, -2.08616e-07, 1.78814e-07, 1, 2.23517e-07, -1, 1.78814e-07, -0.693124, 6.28068, 0.0136886)
-light_color = Color(0.934408, 0.777478, 0.470835, 1)
-light_energy = 16.0
+transform = Transform3D(1, 2.23517e-07, 2.08616e-07, -2.08616e-07, 1.78814e-07, 1, 2.23517e-07, -1, 1.78814e-07, -0.693124, 6.68817, 0.0136886)
+light_color = Color(0.950255, 0.789177, 0.562347, 1)
+light_energy = 8.889
 light_bake_mode = 1
 spot_range = 40.849
-spot_attenuation = 3.37
+spot_attenuation = 1.29
 spot_angle = 68.19
 
 [node name="SpotLight3D7" type="SpotLight3D" parent="."]
@@ -169,7 +172,7 @@ spot_attenuation = 1.6
 spot_angle = 71.75
 
 [node name="SpotLight3D13" type="SpotLight3D" parent="."]
-transform = Transform3D(0.53023, 0.716826, 0.452788, -0.258588, -0.371872, 0.89154, 0.807458, -0.589807, -0.0118152, -36.6865, 6.00608, 7.09069)
+transform = Transform3D(0.53023, 0.716826, 0.452788, -0.258588, -0.371872, 0.89154, 0.807458, -0.589807, -0.0118151, -36.8379, 6.261, 7.09069)
 light_color = Color(1, 0.973495, 0.782796, 1)
 light_energy = 16.0
 shadow_enabled = true
@@ -178,7 +181,7 @@ spot_attenuation = 2.22
 spot_angle = 25.0
 
 [node name="SpotLight3D4" type="SpotLight3D" parent="."]
-transform = Transform3D(0.53683, 0.726333, 0.429247, -0.244591, -0.352942, 0.90311, 0.807458, -0.589807, -0.0118152, -35.8503, 5.88089, 10.8149)
+transform = Transform3D(0.53683, 0.726333, 0.429247, -0.244591, -0.352942, 0.90311, 0.807458, -0.589807, -0.0118153, -36.5307, 5.88089, 10.8149)
 light_color = Color(1, 0.973495, 0.782796, 1)
 light_energy = 16.0
 shadow_enabled = true
@@ -204,4 +207,5 @@ spot_range = 25.094
 spot_attenuation = 1.65
 spot_angle = 30.14
 
+[editable path="capstone_blockoutv15"]
 [editable path="Player"]

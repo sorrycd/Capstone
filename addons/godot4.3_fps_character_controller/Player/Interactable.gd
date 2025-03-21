@@ -9,9 +9,9 @@ signal interacted(body)
 
 @export_category("Prompt Settings")
 @export_enum(
-	"interact",
+	"Interact",
 	"text",
-	) var prompt_action : String = "interact"
+	) var prompt_action : String = "Interact"
 @export_multiline var prompt_message : String = "Interact"
 @export var prompt_key_override : bool = false
 @export_multiline var override_text : String = ""
@@ -40,7 +40,8 @@ func get_key() -> String:
 func get_prompt() -> String:
 	return prompt_message
 
-func interact(body) -> void:
+func Interact(body) -> void:
+	print("📖 Interacted with:", self.name)
 	interacted.emit(body)
 
 func run_dialogue() -> void:
