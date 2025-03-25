@@ -4,7 +4,7 @@ class_name Player extends CharacterBody3D
 @export var Move_Speed: float = 1.5
 @export var Sprint_Speed: float = 10.0
 @export var Jump_Velocity: float = 4.5
-@export var Wall_Jump_Velocity: Vector3 = Vector3(0, 6.5, 0) # Vertical boost only
+@export var Wall_Jump_Velocity: Vector3 = Vector3(0, 6.5, 0)
 @export var PlayerInventory: Array[Dictionary] = []
 
 @export_category("Inputs")
@@ -16,7 +16,8 @@ class_name Player extends CharacterBody3D
 	"Jump": "ui_accept",
 	"Escape": "ui_cancel",
 	"Sprint": "ui_accept",
-	"Interact": "ui_accept"
+	"Interact": "ui_accept",
+	"CloseUI": "ui_close"
 }
 
 @export_category("Mouse Settings")
@@ -39,26 +40,29 @@ var Rot_Vel: Vector2 = Vector2()
 var _speed: float = Move_Speed
 var _isMouseCaptured: bool = true
 var can_wall_jump: bool = false
-var flashlight_on = false
+var flashlight_on := false
+var book_ui_open := false
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	ltilt.rotation.z = TiltThreshhold
 	rtilt.rotation.z = -TiltThreshhold
-	flashlight.light_energy = 0  # Start OFF without breaking light influence
+	flashlight.light_energy = 0
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		Camera_Inp = event.relative
-		
-	if event.is_action_pressed("toggle_flashlight"):  
-		flashlight_on = !flashlight_on
-		
-		if flashlight_on:
-			flashlight.light_energy = 1.0  # Restore brightness
-		else:
-			flashlight.light_energy = 0  # Turn it "off" without removing influence
 
+	if event.is_action_pressed("toggle_flashlight"):
+		flashlight_on = !flashlight_on
+		flashlight.light_energy = 1.0 if flashlight_on else 0
+
+	if event.is_action_pressed("Interact"):
+		var book_ui = get_tree().get_root().find_child("BookImagePanel", true, false)
+		if book_ui and book_ui.visible:
+			book_ui.visible = false
+			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+			book_ui_open = false
 
 func _process(delta: float) -> void:
 	_handle_mouse_capture()
@@ -75,7 +79,7 @@ func _handle_mouse_capture() -> void:
 
 func _apply_gravity(delta: float) -> void:
 	if not is_on_floor():
-		velocity.y -= 9.8 * delta  # Standard gravity application
+		velocity.y -= 9.8 * delta
 
 func _handle_jump() -> void:
 	if Input.is_action_just_pressed(InputDictionary["Jump"]):
@@ -85,9 +89,8 @@ func _handle_jump() -> void:
 			_perform_wall_jump()
 
 func _perform_wall_jump() -> void:
-	# Gives an upward boost regardless of movement direction
-	velocity.y = Wall_Jump_Velocity.y  
-	can_wall_jump = false  # Prevents infinite jumps
+	velocity.y = Wall_Jump_Velocity.y
+	can_wall_jump = false
 
 func _handle_movement(delta: float) -> void:
 	var input_dir: Vector2 = Input.get_vector(
@@ -106,9 +109,9 @@ func _handle_camera_movement(delta: float) -> void:
 	rotate_y(-deg_to_rad(Rot_Vel.x))
 	head.rotation.x = clamp(head.rotation.x, -1.5, 1.5)
 	Camera_Inp = Vector2.ZERO
-	camera_tilt(delta)
+	_camera_tilt(delta)
 
-func camera_tilt(delta: float) -> void:
+func _camera_tilt(delta: float) -> void:
 	var tilt_target = (
 		ltilt.rotation.z if Input.is_action_pressed(InputDictionary["Left"]) else
 		rtilt.rotation.z if Input.is_action_pressed(InputDictionary["Right"]) else 0

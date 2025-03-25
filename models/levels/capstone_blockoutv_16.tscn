@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmijb0i6420tt"]
+
+[ext_resource type="PackedScene" uid="uid://bed6arberq7bb" path="res://models/levels/capstone_blockoutv16.glb" id="1_6877d"]
+[ext_resource type="Script" uid="uid://dwtu1nysikrud" path="res://addons/godot4.3_fps_character_controller/Player/Interactable.gd" id="2_utaog"]
+
+[node name="capstone_blockoutv16" instance=ExtResource("1_6877d")]
+
+[node name="StaticBody3D" parent="book_closed" index="0"]
+script = ExtResource("2_utaog")
+
+[node name="StaticBody3D" parent="book_open" index="0"]
+script = ExtResource("2_utaog")

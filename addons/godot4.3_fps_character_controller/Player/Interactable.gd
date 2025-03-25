@@ -2,16 +2,11 @@ class_name Interactable extends Node
 
 signal interacted(body)
 
-
 @export_subgroup("Dialogue")
 @export_file("*.json") var dialouge : String
 
-
 @export_category("Prompt Settings")
-@export_enum(
-	"Interact",
-	"text",
-	) var prompt_action : String = "Interact"
+@export_enum("Interact", "text") var prompt_action : String = "Interact"
 @export_multiline var prompt_message : String = "Interact"
 @export var prompt_key_override : bool = false
 @export_multiline var override_text : String = ""
@@ -20,50 +15,50 @@ signal interacted(body)
 
 var _dialogue_parsed : Dictionary
 var _dialogue_index : int = 1
+var book_opened := false
+var input_blocked := false
+
+# Mesh refs
+var book_closed_mesh: Node = null
+var book_open_mesh: Node = null
 
 func _ready() -> void:
-	if dialouge != "":
-		_parse_dialogue()
-
+	var book_root = get_parent().get_parent()
+	book_closed_mesh = book_root.get_node_or_null("book_closed")
+	book_open_mesh = book_root.get_node_or_null("book_open")
 
 func get_key() -> String:
-	var key_name = ""
 	if prompt_key_override:
 		return override_text
-	else:
-		for action in InputMap.action_get_events(prompt_action):
-			if action is InputEventKey:
-				key_name = action.as_text_physical_keycode()
-				break
-	return key_name
+	for action in InputMap.action_get_events(prompt_action):
+		if action is InputEventKey:
+			return action.as_text_physical_keycode()
+	return ""
 
 func get_prompt() -> String:
 	return prompt_message
 
 func Interact(body) -> void:
-	print("📖 Interacted with:", self.name)
-	interacted.emit(body)
-
-func run_dialogue() -> void:
-	_dialogue_index += 1
-	if _dialogue_index > _dialogue_parsed["Dialogue"].size():
-		reset_current_dialogue()
-	prompt_message = _dialogue_parsed["Dialogue"]["%s"%[_dialogue_index]]["Text"]
-
-func reset_current_dialogue() -> void:
-	_dialogue_index = 1
-
-func _parse_dialogue() -> void:
-	_hasDialogue = true
-	var file = FileAccess.open(dialouge, FileAccess.READ)
-	if file.get_open_error() != OK:
-		printerr("Error opening file")
+	var book_ui = get_tree().get_root().find_child("BookImagePanel", true, false)
+	if not book_ui:
+		printerr("Book UI not found.")
 		return
-	var data = file.get_as_text()	
-	var json = JSON.new()
-	var err = json.parse(data)
-	if err == OK:
-		_dialogue_parsed = json.get_data()
-		print(_dialogue_parsed["Dialogue"])
 
-	file.close()
+	if not book_opened:
+		print("📖 Opening the book...")
+		if book_closed_mesh: book_closed_mesh.visible = false
+		if book_open_mesh: book_open_mesh.visible = true
+		book_opened = true
+		book_ui.visible = true
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	else:
+		print("📕 Closing the book...")
+		if book_closed_mesh: book_closed_mesh.visible = true
+		if book_open_mesh: book_open_mesh.visible = false
+		book_opened = false
+		book_ui.visible = false
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+
+	var player = get_tree().get_first_node_in_group("player")
+	if player:
+		player.book_ui_open = book_opened
