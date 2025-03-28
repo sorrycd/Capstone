@@ -22,7 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://ch4c8ochha1mx" path="res://models/levels/capstone_blockoutv16_grass with leafes diffuse.jpg" id="17_m514l"]
 [ext_resource type="Texture2D" uid="uid://dx5fumsnautb4" path="res://models/levels/capstone_blockoutv16_grass with leafes rough.png" id="18_llic6"]
 [ext_resource type="Texture2D" uid="uid://dwa4710lavptv" path="res://models/levels/capstone_blockoutv16_grass with leafes bump.jpg" id="19_yjo7n"]
-[ext_resource type="Texture2D" uid="uid://bqptccxyhx747" path="res://Book/4ae92128-c7df-4ed6-807b-caedf90b36b5.webp" id="21_aobyt"]
+[ext_resource type="Texture2D" uid="uid://bi3rmi8otdie5" path="res://Book/Screenshot 2025-03-28 115909.jpg" id="21_aobyt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ul4xd"]
 
@@ -2666,8 +2666,12 @@ script = ExtResource("2_m7jmp")
 
 [node name="BookImagePanel" type="Panel" parent="CanvasLayer"]
 visible = false
-offset_right = 40.0
-offset_bottom = 40.0
+layout_direction = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/BookImagePanel"]
 layout_mode = 0
