@@ -4,15 +4,16 @@ importer="2d_array_texture"
 type="CompressedTexture2DArray"
 uid="uid://bj0hvsjey8tva"
 path.bptc="res://.godot/imported/scene.exr-ec3130c48c3288e90a17f347be2fbda8.bptc.ctexarray"
+path.astc="res://.godot/imported/scene.exr-ec3130c48c3288e90a17f347be2fbda8.astc.ctexarray"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://scene.exr"
-dest_files=["res://.godot/imported/scene.exr-ec3130c48c3288e90a17f347be2fbda8.bptc.ctexarray"]
+dest_files=["res://.godot/imported/scene.exr-ec3130c48c3288e90a17f347be2fbda8.bptc.ctexarray", "res://.godot/imported/scene.exr-ec3130c48c3288e90a17f347be2fbda8.astc.ctexarray"]
 
 [params]
 
@@ -24,4 +25,4 @@ compress/channel_pack=1
 mipmaps/generate=false
 mipmaps/limit=-1
 slices/horizontal=1
-slices/vertical=3
+slices/vertical=2
