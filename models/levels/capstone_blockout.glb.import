@@ -43,13 +43,7 @@ _subresources={
 "PATH:Cube_005": {
 "generate/physics": true
 },
-"PATH:Cube_006": {
-"generate/physics": true
-},
-"PATH:Cube_008": {
-"generate/physics": true
-},
-"PATH:Cube_010": {
+"PATH:Cube_009": {
 "generate/physics": true
 },
 "PATH:banner": {
@@ -74,15 +68,6 @@ _subresources={
 "generate/physics": true
 },
 "PATH:floors_004": {
-"generate/physics": true
-},
-"PATH:frame": {
-"generate/physics": true
-},
-"PATH:frame_001": {
-"generate/physics": true
-},
-"PATH:frame_002": {
 "generate/physics": true
 },
 "PATH:nails": {
