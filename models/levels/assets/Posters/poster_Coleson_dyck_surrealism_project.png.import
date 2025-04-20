@@ -1,0 +1,39 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://lrmg8j7re7eo"
+path.s3tc="res://.godot/imported/poster_Coleson_dyck_surrealism_project.png-220e7b61b5bcf4817481d039321be2fc.s3tc.ctex"
+path.etc2="res://.godot/imported/poster_Coleson_dyck_surrealism_project.png-220e7b61b5bcf4817481d039321be2fc.etc2.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "d1c95ac075ff4c904042660c1b50bd4a"
+}
+
+[deps]
+
+source_file="res://models/levels/assets/Posters/poster_Coleson_dyck_surrealism_project.png"
+dest_files=["res://.godot/imported/poster_Coleson_dyck_surrealism_project.png-220e7b61b5bcf4817481d039321be2fc.s3tc.ctex", "res://.godot/imported/poster_Coleson_dyck_surrealism_project.png-220e7b61b5bcf4817481d039321be2fc.etc2.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

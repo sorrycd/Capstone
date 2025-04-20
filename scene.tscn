@@ -1,20 +1,25 @@
-[gd_scene load_steps=254 format=4 uid="uid://bmla0jfaw6a8c"]
+[gd_scene load_steps=274 format=4 uid="uid://bmla0jfaw6a8c"]
 
 [ext_resource type="Script" uid="uid://cd2prcmk5k4m0" path="res://game.gd" id="1_6q6xp"]
+[ext_resource type="Texture2D" uid="uid://bhf07ydgdtsaj" path="res://models/levels/assets/Posters/surreal_surreal.jpg" id="2_llic6"]
 [ext_resource type="Script" uid="uid://ckg0yl2mgx418" path="res://fpscounter.gd" id="2_m7jmp"]
+[ext_resource type="Texture2D" uid="uid://df75w406628r1" path="res://models/levels/assets/Posters/poster_illustrator project coleson dyck.png" id="2_m514l"]
 [ext_resource type="PackedScene" uid="uid://cke7vmuyacq4y" path="res://models/levels/assets/Table/tablecap.glb" id="2_ni31j"]
 [ext_resource type="PackedScene" uid="uid://c1jyvcb4o2o7d" path="res://models/levels/assets/Clutter/Haunted_house/4_Haunted_house.gltf" id="2_otx46"]
 [ext_resource type="PackedScene" uid="uid://c4lccs8l5darl" path="res://addons/godot4.3_fps_character_controller/Player/player.tscn" id="2_v5ilv"]
 [ext_resource type="Texture2D" uid="uid://v2ab423jchpg" path="res://models/levels/assets/Clutter/props_capstone_blockout_Poster.png" id="3_8hm71"]
 [ext_resource type="Script" uid="uid://dwtu1nysikrud" path="res://addons/godot4.3_fps_character_controller/Player/Interactable.gd" id="3_g6g5t"]
+[ext_resource type="Texture2D" uid="uid://lrmg8j7re7eo" path="res://models/levels/assets/Posters/poster_Coleson_dyck_surrealism_project.png" id="3_llic6"]
 [ext_resource type="PackedScene" uid="uid://h4c3yc0meij3" path="res://models/levels/assets/Clutter/Castle/ColesonDyck_Castle.gltf" id="3_m514l"]
 [ext_resource type="LightmapGIData" uid="uid://icioski0a1yf" path="res://scene.lmbake" id="3_u3cyc"]
 [ext_resource type="Texture2D" uid="uid://cannvy0155cjb" path="res://models/levels/assets/Clutter/props_plane_divided_DefaultMaterial_BaseColor.jpg" id="4_223my"]
+[ext_resource type="Texture2D" uid="uid://bamcm4u0jcvdv" path="res://models/levels/assets/Posters/poster_CC_poser.png" id="4_yjo7n"]
 [ext_resource type="Texture2D" uid="uid://b6wx52bh0dn7u" path="res://models/levels/assets/Clutter/props_plane_divided_DefaultMaterial_Normal(.jpg" id="5_17rhs"]
 [ext_resource type="Script" uid="uid://44obecoqs8y8" path="res://bookphysics.gd" id="6_iss77"]
 [ext_resource type="Texture2D" uid="uid://cexrpv4m1slim" path="res://models/levels/assets/Clutter/props_fabric_191_Albedo.jpg" id="8_xpof7"]
 [ext_resource type="Texture2D" uid="uid://dj12iiv1rew0m" path="res://models/levels/assets/Clutter/props_fabric_191_Normal.jpg" id="9_302uq"]
 [ext_resource type="Texture2D" uid="uid://pguho5uvjiu4" path="res://models/levels/assets/Clutter/props_Dark Red Leather.jpg" id="10_1q4c1"]
+[ext_resource type="Script" uid="uid://83thug8fj8gw" path="res://addons/godot4.3_fps_character_controller/Player/Interactable2.gd" id="10_wncyr"]
 [ext_resource type="Texture2D" uid="uid://dphqg3ffhv5hl" path="res://models/levels/capstone_blockout_painted_plaster_wall_18_color.jpg" id="11_g6g5t"]
 [ext_resource type="Texture2D" uid="uid://dcffrx0qxgipi" path="res://models/levels/capstone_blockout_painted_plaster_wall_18_normal.jpg" id="12_iss77"]
 [ext_resource type="Texture2D" uid="uid://bgrl1rl74o7mr" path="res://models/levels/capstone_blockout_fabric_191_Albedo.jpg" id="14_wncyr"]
@@ -26,6 +31,260 @@
 [ext_resource type="Script" uid="uid://dslh5c2haws1" path="res://popcan.gd" id="23_pou65"]
 [ext_resource type="Texture2D" uid="uid://bddg1gccnqvnm" path="res://models/levels/assets/Clutter/popcan_fienne-another-novice-can-base-color.jpg" id="23_wncyr"]
 [ext_resource type="Texture2D" uid="uid://jq5x85ir05xe" path="res://models/levels/assets/Clutter/popcan_fienne-another-novice-can-normal.png" id="24_pou65"]
+[ext_resource type="Texture2D" uid="uid://d33yq70cbuoeb" path="res://Book/IMG_1108.JPG" id="25_xb05w"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_das24"]
+resource_name = "Material"
+cull_mode = 2
+albedo_color = Color(0.906635, 0.782603, 0.578751, 1)
+roughness = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qxw27"]
+resource_name = "Material.002"
+cull_mode = 2
+albedo_texture = ExtResource("2_llic6")
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_f21j1"]
+_surfaces = [{
+"aabb": AABB(-0.152492, -1, -1, 0.265902, 2.57309, 2),
+"format": 34359742465,
+"index_count": 102,
+"index_data": PackedByteArray("AAABAAIAAAACAAMAAAAEAAEABAAAAAUAAAADAAUABAAFAAYAAwAGAAUAAQAEAAYAAwAHAAYAAQAGAAcACAADAAIAAQAJAAIACAACAAkABwAKAAEAAQAKAAkAAwALAAcABwALAAoAAwAIAAsACgAMAAkADQAIAAkADQAJAAwACAAOAAsACAANAA4ACwAPAAoACgAPAAwACwAOAA8AEAANAAwAEQANABAAEQAOAA0AEAAMABIAEgAMAA8AEwAOABEAEgAPABMAEwAPAA4A"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("6CYcvgAAgL8AAIC/CcKNPQAAgL8AAIA/CcKNPQAAgL8AAIC/CcKNPSJbyT8AAIC/6CYcvgAAgL8AAIA/6CYcviJbyT8AAIC/6CYcviJbyT8AAIA/CcKNPSJbyT8AAIA/lUPoPSrdxj8QBHu/lUPoPQ8Ee78PBHu/lUPoPQ8Ee78PBHs/lUPoPSrdxj8QBHs/jpPRPaf7br+n+26/jpPRPfXYwD+n+26/jpPRPfXYwD+n+24/jpPRPaf7br+n+24/im19Pf77uT+4QWG/im19Pf77uT+4QWE/im19PbhBYb+4QWG/im19PbhBYb+4QWE/")
+}, {
+"aabb": AABB(0.061872, -0.879909, -0.879909, 1e-05, 2.33291, 1.75982),
+"format": 34359742465,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "Material.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("im19PbhBYb+4QWG/im19Pf77uT+4QWE/im19Pf77uT+4QWG/im19PbhBYb+4QWE/")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_wl0kc"]
+resource_name = "surreal_Cube_001"
+lightmap_size_hint = Vector2i(106, 98)
+_surfaces = [{
+"aabb": AABB(-0.152492, -1, -1, 0.265902, 2.57309, 2),
+"attribute_data": PackedByteArray("oH0HPoANAzx+Dik+Xk4BP1x8rD0GOeI+zZTBPfahsT1cfKw9gA0DPM2UwT0STgE/oH0HPgY54j5+Dik+UqSxPQAAAAAGOeI+pCZYP07BCz+aIN4+AACAP59D6j4FL6c7AAAAAAAAgD+kJlg/BS+nO5og3j4GOeI+n0PqPk7BCz8Qd+s+fo/vPl8V2TxB/OY8nm9aPwCb6T5bkNY+9iuCPF91Vz9+j+8++J7QPkH85jySguU+/prpPmr+czz2K4I8X3VXP8VUeT/4ntA+u0oQP5KC5T4ET3w/av5zPD1xEz8Qd+s+xVR5P18V2Ty7ShA/nm9aPwRPfD9bkNY+PXETP00Qbz8GOeI+zcp+PyVJUj8pYHs/AACAP92V/T5u1WU/TRBvPwAAgD+8lf0+JUlSPyhgez8GOeI+3sp+P27VZT9xwGI/BjniPgp4cT8DFjw9ThBvPwAAgD9vZV8/LjQWP3DAYj8AAIA/CnhxPz80Fj9OEG8/BjniPm9lXz/mFDw9yP1EPYANAzztcwg/bHUsPwAAAAAGOeI+wXhrPwAAQD8AAAAAgA0DPDN0CD8AAEA/yf1EPQY54j57eGs/bHUsP191Vz9+j+8++J7QPkH85jyeb1o/BE98P1uQ1j49cRM/X3VXP8VUeT/4ntA+u0oQP55vWj8Am+k+W5DWPvYrgjySguU+BE98P2r+czw9cRM/myDePpRi5D4FkZo7BS+nO5KC5T4Am+k+av5zPPYrgjyaIN4+Oet+P+iQmjs/NBY/AACAPznrfj95hf8+wctpPyhgez8GOeI+3sp+P27VZT8AAIA/lGLkPsvSfT/By2k/KWB7PwAAgD/dlf0+btVlP3DAYj8AAIA/CnhxPz80Fj+aIF4/lGLkPtAhdT+N1kw9ccBiPwY54j4KeHE/AxY8PZogXj85634/0CF1P+wnFT+aIF4/Oet+PwrG2z4/NBY/nm9aPwCb6T5bkNY+9iuCPJogXj+UYuQ+CMbbPgUvpzueb1o/BE98P1uQ1j49cRM/yP1EPYANAzztcwg/bHUsP6B9hz12D+A+OoJqP2N9KD/J/UQ9BjniPnt4az9sdSw/oH2HPYA/SDwwawk/Y30oPylK4D4AAIA/6JCaOz80Fj+eb1o/BE98P1uQ1j49cRM/0wtdPwAAgD8Kxts+PzQWP5KC5T4ET3w/av5zPD1xEz9cfKw9BjniPs2UwT32obE9oH2HPYA/SDz2OaQ9t0MAP1x8rD2ADQM8zZTBPRJOAT+gfYc9dg/gPvY5pD2J/bk90wtdPwQ54j4Ixts+BS+nO5KC5T7+muk+av5zPPYrgjwpSuA+BjniPgWRmjsFL6c7nm9aPwCb6T5bkNY+9iuCPBB36z7FVHk/XxXZPLtKED+SguU+AJvpPmr+czz2K4I8EHfrPn6P7z5fFdk8QfzmPJKC5T4ET3w/av5zPD1xEz8="),
+"format": 34359742519,
+"index_count": 102,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0AMAAxADIAMAAzADEANAA1ADYANAA3ADUAOAA5ADoAOAA7ADkAPAA9AD4APAA/AD0AQABBAEIAQABDAEEA"),
+"material": SubResource("StandardMaterial3D_das24"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 68,
+"vertex_data": PackedByteArray("6CYcvgAAgL8AAIC/CcKNPQAAgL8AAIA/CcKNPQAAgL8AAIC/6CYcvgAAgL8AAIA/6CYcvgAAgL8AAIA/6CYcviJbyT8AAIC/6CYcviJbyT8AAIA/6CYcvgAAgL8AAIC/im19PbhBYb+4QWG/jpPRPaf7br+n+24/im19PbhBYb+4QWE/jpPRPaf7br+n+26/im19Pf77uT+4QWE/jpPRPfXYwD+n+26/im19Pf77uT+4QWG/jpPRPfXYwD+n+24/6CYcvgAAgL8AAIC/CcKNPSJbyT8AAIC/6CYcviJbyT8AAIC/CcKNPQAAgL8AAIC/CcKNPQAAgL8AAIA/6CYcviJbyT8AAIA/CcKNPSJbyT8AAIA/6CYcvgAAgL8AAIA/CcKNPSJbyT8AAIC/6CYcviJbyT8AAIA/6CYcviJbyT8AAIC/CcKNPSJbyT8AAIA/im19PbhBYb+4QWE/jpPRPfXYwD+n+24/im19Pf77uT+4QWE/jpPRPaf7br+n+24/jpPRPfXYwD+n+26/lUPoPQ8Ee78PBHu/jpPRPaf7br+n+26/lUPoPSrdxj8QBHu/lUPoPSrdxj8QBHu/CcKNPQAAgL8AAIC/lUPoPQ8Ee78PBHu/CcKNPSJbyT8AAIC/CcKNPSJbyT8AAIA/lUPoPQ8Ee78PBHs/CcKNPQAAgL8AAIA/lUPoPSrdxj8QBHs/lUPoPSrdxj8QBHs/jpPRPaf7br+n+24/lUPoPQ8Ee78PBHs/jpPRPfXYwD+n+24/CcKNPSJbyT8AAIC/lUPoPSrdxj8QBHs/CcKNPSJbyT8AAIA/lUPoPSrdxj8QBHu/lUPoPSrdxj8QBHu/jpPRPfXYwD+n+24/lUPoPSrdxj8QBHs/jpPRPfXYwD+n+26/CcKNPQAAgL8AAIA/lUPoPQ8Ee78PBHu/CcKNPQAAgL8AAIC/lUPoPQ8Ee78PBHs/lUPoPQ8Ee78PBHs/jpPRPaf7br+n+26/lUPoPQ8Ee78PBHu/jpPRPaf7br+n+24/im19Pf77uT+4QWG/jpPRPaf7br+n+26/im19PbhBYb+4QWG/jpPRPfXYwD+n+26//38AAAAA/7//fwAAAAD/v/9/AAAAAP+//38AAAAA/78AAP9//////wAA/3//////AAD/f/////8AAP9///////LIC7f/f/+/8sgLt/9//7/yyAu3/3//v/LIC7f/f/+/8sjzSP9//7/yyPNI/3//v/LI80j/f/+/8sjzSP9//7//////////v/////////+//////////7//////////v/9//38AAP+//3//fwAA/7//f/9/AAD/v/9//38AAP+//3///////7//f///////v/9///////+//3///////7///wu3C7f/v///C7cLt/+///8Ltwu3/7///wu3C7f/v5Xn/3+VZ/+/lef/f5Vn/7+V5/9/lWf/v5Xn/3+VZ/+////Z2NnY/7///9nY2dj/v///2djZ2P+////Z2NnY/78lp/9/JSf/vyWn/38lJ/+/Jaf/fyUn/78lp/9/JSf/v///aZhpmP+///9pmGmY/7///2mYaZj/v///aZhpmP+/JafZ2NnYbKwlp9nY2dhsrCWn2djZ2GysJafZ2NnYbKyV55Vn/3//v5XnlWf/f/+/leeVZ/9//7+V55Vn/3//vyWnJSclJ2ysJaclJyUnbKwlpyUnJSdsrCWnJSclJ2ysledpmP9//7+V52mY/3//v5XnaZj/f/+/ledpmP9//7/yyP9/80j/v/LI/3/zSP+/8sj/f/NI/7/yyP9/80j/vw==")
+}, {
+"aabb": AABB(0.061872, -0.879909, -0.879909, 1e-05, 2.33291, 1.75982),
+"attribute_data": PackedByteArray("09RoPwDAHLsnGO8+orF+P1JZuT1gToA/6JCaO3MKHj+IrLc9AEQ9u+iQmjuisX4/agppP6JegD8nGO8+cwoePw=="),
+"format": 34359742519,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_qxw27"),
+"name": "Material.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("im19PbhBYb+4QWG/im19Pf77uT+4QWE/im19Pf77uT+4QWG/im19PbhBYb+4QWE/////fwuAAID///9/C4AAgP///38LgACA////fwuAAIA=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_f21j1")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0tl4x"]
+resource_name = "Material"
+cull_mode = 2
+albedo_color = Color(0.906635, 0.782603, 0.578751, 1)
+roughness = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_621b4"]
+resource_name = "Material.001"
+cull_mode = 2
+albedo_texture = ExtResource("2_m514l")
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_dapk0"]
+_surfaces = [{
+"aabb": AABB(-0.152492, -1, -1, 0.265902, 2.57309, 2),
+"format": 34359742465,
+"index_count": 102,
+"index_data": PackedByteArray("AAABAAIAAAACAAMAAAAEAAEABAAAAAUAAAADAAUABAAFAAYAAwAGAAUAAQAEAAYAAwAHAAYAAQAGAAcACAADAAIAAQAJAAIACAACAAkABwAKAAEAAQAKAAkAAwALAAcABwALAAoAAwAIAAsACgAMAAkADQAIAAkADQAJAAwACAAOAAsACAANAA4ACwAPAAoACgAPAAwACwAOAA8AEAANAAwAEQANABAAEQAOAA0AEAAMABIAEgAMAA8AEwAOABEAEgAPABMAEwAPAA4A"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("6CYcvgAAgL8AAIC/CcKNPQAAgL8AAIA/CcKNPQAAgL8AAIC/CcKNPSJbyT8AAIC/6CYcvgAAgL8AAIA/6CYcviJbyT8AAIC/6CYcviJbyT8AAIA/CcKNPSJbyT8AAIA/lUPoPSrdxj8QBHu/lUPoPQ8Ee78PBHu/lUPoPQ8Ee78PBHs/lUPoPSrdxj8QBHs/jpPRPaf7br+n+26/jpPRPfXYwD+n+26/jpPRPfXYwD+n+24/jpPRPaf7br+n+24/im19Pf77uT+4QWG/im19Pf77uT+4QWE/im19PbhBYb+4QWG/im19PbhBYb+4QWE/")
+}, {
+"aabb": AABB(0.061872, -0.879909, -0.879909, 1e-05, 2.33291, 1.75982),
+"format": 34359742465,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("im19PbhBYb+4QWG/im19Pf77uT+4QWE/im19Pf77uT+4QWG/im19PbhBYb+4QWE/")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ob66y"]
+resource_name = "poster_Cube"
+lightmap_size_hint = Vector2i(106, 98)
+_surfaces = [{
+"aabb": AABB(-0.152492, -1, -1, 0.265902, 2.57309, 2),
+"attribute_data": PackedByteArray("oH0HPoANAzx+Dik+Xk4BP1x8rD0GOeI+zZTBPfahsT1cfKw9gA0DPM2UwT0STgE/oH0HPgY54j5+Dik+UqSxPQAAAAAGOeI+pCZYP07BCz+aIN4+AACAP59D6j4FL6c7AAAAAAAAgD+kJlg/BS+nO5og3j4GOeI+n0PqPk7BCz8Qd+s+fo/vPl8V2TxB/OY8nm9aPwCb6T5bkNY+9iuCPF91Vz9+j+8++J7QPkH85jySguU+/prpPmr+czz2K4I8X3VXP8VUeT/4ntA+u0oQP5KC5T4ET3w/av5zPD1xEz8Qd+s+xVR5P18V2Ty7ShA/nm9aPwRPfD9bkNY+PXETP00Qbz8GOeI+zcp+PyVJUj8pYHs/AACAP92V/T5u1WU/TRBvPwAAgD+8lf0+JUlSPyhgez8GOeI+3sp+P27VZT9xwGI/BjniPgp4cT8DFjw9ThBvPwAAgD9vZV8/LjQWP3DAYj8AAIA/CnhxPz80Fj9OEG8/BjniPm9lXz/mFDw9yP1EPYANAzztcwg/bHUsPwAAAAAGOeI+wXhrPwAAQD8AAAAAgA0DPDN0CD8AAEA/yf1EPQY54j57eGs/bHUsP191Vz9+j+8++J7QPkH85jyeb1o/BE98P1uQ1j49cRM/X3VXP8VUeT/4ntA+u0oQP55vWj8Am+k+W5DWPvYrgjySguU+BE98P2r+czw9cRM/myDePpRi5D4FkZo7BS+nO5KC5T4Am+k+av5zPPYrgjyaIN4+Oet+P+iQmjs/NBY/AACAPznrfj95hf8+wctpPyhgez8GOeI+3sp+P27VZT8AAIA/lGLkPsvSfT/By2k/KWB7PwAAgD/dlf0+btVlP3DAYj8AAIA/CnhxPz80Fj+aIF4/lGLkPtAhdT+N1kw9ccBiPwY54j4KeHE/AxY8PZogXj85634/0CF1P+wnFT+aIF4/Oet+PwrG2z4/NBY/nm9aPwCb6T5bkNY+9iuCPJogXj+UYuQ+CMbbPgUvpzueb1o/BE98P1uQ1j49cRM/yP1EPYANAzztcwg/bHUsP6B9hz12D+A+OoJqP2N9KD/J/UQ9BjniPnt4az9sdSw/oH2HPYA/SDwwawk/Y30oPylK4D4AAIA/6JCaOz80Fj+eb1o/BE98P1uQ1j49cRM/0wtdPwAAgD8Kxts+PzQWP5KC5T4ET3w/av5zPD1xEz9cfKw9BjniPs2UwT32obE9oH2HPYA/SDz2OaQ9t0MAP1x8rD2ADQM8zZTBPRJOAT+gfYc9dg/gPvY5pD2J/bk90wtdPwQ54j4Ixts+BS+nO5KC5T7+muk+av5zPPYrgjwpSuA+BjniPgWRmjsFL6c7nm9aPwCb6T5bkNY+9iuCPBB36z7FVHk/XxXZPLtKED+SguU+AJvpPmr+czz2K4I8EHfrPn6P7z5fFdk8QfzmPJKC5T4ET3w/av5zPD1xEz8="),
+"format": 34359742519,
+"index_count": 102,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0AMAAxADIAMAAzADEANAA1ADYANAA3ADUAOAA5ADoAOAA7ADkAPAA9AD4APAA/AD0AQABBAEIAQABDAEEA"),
+"material": SubResource("StandardMaterial3D_0tl4x"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 68,
+"vertex_data": PackedByteArray("6CYcvgAAgL8AAIC/CcKNPQAAgL8AAIA/CcKNPQAAgL8AAIC/6CYcvgAAgL8AAIA/6CYcvgAAgL8AAIA/6CYcviJbyT8AAIC/6CYcviJbyT8AAIA/6CYcvgAAgL8AAIC/im19PbhBYb+4QWG/jpPRPaf7br+n+24/im19PbhBYb+4QWE/jpPRPaf7br+n+26/im19Pf77uT+4QWE/jpPRPfXYwD+n+26/im19Pf77uT+4QWG/jpPRPfXYwD+n+24/6CYcvgAAgL8AAIC/CcKNPSJbyT8AAIC/6CYcviJbyT8AAIC/CcKNPQAAgL8AAIC/CcKNPQAAgL8AAIA/6CYcviJbyT8AAIA/CcKNPSJbyT8AAIA/6CYcvgAAgL8AAIA/CcKNPSJbyT8AAIC/6CYcviJbyT8AAIA/6CYcviJbyT8AAIC/CcKNPSJbyT8AAIA/im19PbhBYb+4QWE/jpPRPfXYwD+n+24/im19Pf77uT+4QWE/jpPRPaf7br+n+24/jpPRPfXYwD+n+26/lUPoPQ8Ee78PBHu/jpPRPaf7br+n+26/lUPoPSrdxj8QBHu/lUPoPSrdxj8QBHu/CcKNPQAAgL8AAIC/lUPoPQ8Ee78PBHu/CcKNPSJbyT8AAIC/CcKNPSJbyT8AAIA/lUPoPQ8Ee78PBHs/CcKNPQAAgL8AAIA/lUPoPSrdxj8QBHs/lUPoPSrdxj8QBHs/jpPRPaf7br+n+24/lUPoPQ8Ee78PBHs/jpPRPfXYwD+n+24/CcKNPSJbyT8AAIC/lUPoPSrdxj8QBHs/CcKNPSJbyT8AAIA/lUPoPSrdxj8QBHu/lUPoPSrdxj8QBHu/jpPRPfXYwD+n+24/lUPoPSrdxj8QBHs/jpPRPfXYwD+n+26/CcKNPQAAgL8AAIA/lUPoPQ8Ee78PBHu/CcKNPQAAgL8AAIC/lUPoPQ8Ee78PBHs/lUPoPQ8Ee78PBHs/jpPRPaf7br+n+26/lUPoPQ8Ee78PBHu/jpPRPaf7br+n+24/im19Pf77uT+4QWG/jpPRPaf7br+n+26/im19PbhBYb+4QWG/jpPRPfXYwD+n+26//38AAAAA/7//fwAAAAD/v/9/AAAAAP+//38AAAAA/78AAP9//////wAA/3//////AAD/f/////8AAP9///////LIC7f/f/+/8sgLt/9//7/yyAu3/3//v/LIC7f/f/+/8sjzSP9//7/yyPNI/3//v/LI80j/f/+/8sjzSP9//7//////////v/////////+//////////7//////////v/9//38AAP+//3//fwAA/7//f/9/AAD/v/9//38AAP+//3///////7//f///////v/9///////+//3///////7///wu3C7f/v///C7cLt/+///8Ltwu3/7///wu3C7f/v5Xn/3+VZ/+/lef/f5Vn/7+V5/9/lWf/v5Xn/3+VZ/+////Z2NnY/7///9nY2dj/v///2djZ2P+////Z2NnY/78lp/9/JSf/vyWn/38lJ/+/Jaf/fyUn/78lp/9/JSf/v///aZhpmP+///9pmGmY/7///2mYaZj/v///aZhpmP+/JafZ2NnYbKwlp9nY2dhsrCWn2djZ2GysJafZ2NnYbKyV55Vn/3//v5XnlWf/f/+/leeVZ/9//7+V55Vn/3//vyWnJSclJ2ysJaclJyUnbKwlpyUnJSdsrCWnJSclJ2ysledpmP9//7+V52mY/3//v5XnaZj/f/+/ledpmP9//7/yyP9/80j/v/LI/3/zSP+/8sj/f/NI/7/yyP9/80j/vw==")
+}, {
+"aabb": AABB(0.061872, -0.879909, -0.879909, 1e-05, 2.33291, 1.75982),
+"attribute_data": PackedByteArray("BXC2O0NBfz8nGO8+orF+Px6Tfj8Auz476JCaO3MKHj8CBX8/6oB+P+iQmjuisX4/l/56OwCLvzsnGO8+cwoePw=="),
+"format": 34359742519,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_621b4"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("im19PbhBYb+4QWG/im19Pf77uT+4QWE/im19Pf77uT+4QWG/im19PbhBYb+4QWE/////f0iA//////9/SID//////39IgP//////f0iA//8=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_dapk0")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m514l"]
+albedo_texture = ExtResource("3_llic6")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_q3cqu"]
+_surfaces = [{
+"aabb": AABB(-0.152492, -1, -1, 0.265902, 2.57309, 2),
+"format": 34359742465,
+"index_count": 102,
+"index_data": PackedByteArray("AAABAAIAAAACAAMAAAAEAAEABAAAAAUAAAADAAUABAAFAAYAAwAGAAUAAQAEAAYAAwAHAAYAAQAGAAcACAADAAIAAQAJAAIACAACAAkABwAKAAEAAQAKAAkAAwALAAcABwALAAoAAwAIAAsACgAMAAkADQAIAAkADQAJAAwACAAOAAsACAANAA4ACwAPAAoACgAPAAwACwAOAA8AEAANAAwAEQANABAAEQAOAA0AEAAMABIAEgAMAA8AEwAOABEAEgAPABMAEwAPAA4A"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("6CYcvgAAgL8AAIC/CcKNPQAAgL8AAIA/CcKNPQAAgL8AAIC/CcKNPSJbyT8AAIC/6CYcvgAAgL8AAIA/6CYcviJbyT8AAIC/6CYcviJbyT8AAIA/CcKNPSJbyT8AAIA/lUPoPSrdxj8QBHu/lUPoPQ8Ee78PBHu/lUPoPQ8Ee78PBHs/lUPoPSrdxj8QBHs/jpPRPaf7br+n+26/jpPRPfXYwD+n+26/jpPRPfXYwD+n+24/jpPRPaf7br+n+24/im19Pf77uT+4QWG/im19Pf77uT+4QWE/im19PbhBYb+4QWG/im19PbhBYb+4QWE/")
+}, {
+"aabb": AABB(0.061872, -0.879909, -0.879909, 1e-05, 2.33291, 1.75982),
+"format": 34359742465,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "Material.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("im19PbhBYb+4QWG/im19Pf77uT+4QWE/im19Pf77uT+4QWG/im19PbhBYb+4QWE/")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_why2y"]
+resource_name = "poster_Cube_001"
+lightmap_size_hint = Vector2i(106, 98)
+_surfaces = [{
+"aabb": AABB(-0.152492, -1, -1, 0.265902, 2.57309, 2),
+"attribute_data": PackedByteArray("oH0HPoANAzx+Dik+Xk4BP1x8rD0GOeI+zZTBPfahsT1cfKw9gA0DPM2UwT0STgE/oH0HPgY54j5+Dik+UqSxPQAAAAAGOeI+pCZYP07BCz+aIN4+AACAP59D6j4FL6c7AAAAAAAAgD+kJlg/BS+nO5og3j4GOeI+n0PqPk7BCz8Qd+s+fo/vPl8V2TxB/OY8nm9aPwCb6T5bkNY+9iuCPF91Vz9+j+8++J7QPkH85jySguU+/prpPmr+czz2K4I8X3VXP8VUeT/4ntA+u0oQP5KC5T4ET3w/av5zPD1xEz8Qd+s+xVR5P18V2Ty7ShA/nm9aPwRPfD9bkNY+PXETP00Qbz8GOeI+zcp+PyVJUj8pYHs/AACAP92V/T5u1WU/TRBvPwAAgD+8lf0+JUlSPyhgez8GOeI+3sp+P27VZT9xwGI/BjniPgp4cT8DFjw9ThBvPwAAgD9vZV8/LjQWP3DAYj8AAIA/CnhxPz80Fj9OEG8/BjniPm9lXz/mFDw9yP1EPYANAzztcwg/bHUsPwAAAAAGOeI+wXhrPwAAQD8AAAAAgA0DPDN0CD8AAEA/yf1EPQY54j57eGs/bHUsP191Vz9+j+8++J7QPkH85jyeb1o/BE98P1uQ1j49cRM/X3VXP8VUeT/4ntA+u0oQP55vWj8Am+k+W5DWPvYrgjySguU+BE98P2r+czw9cRM/myDePpRi5D4FkZo7BS+nO5KC5T4Am+k+av5zPPYrgjyaIN4+Oet+P+iQmjs/NBY/AACAPznrfj95hf8+wctpPyhgez8GOeI+3sp+P27VZT8AAIA/lGLkPsvSfT/By2k/KWB7PwAAgD/dlf0+btVlP3DAYj8AAIA/CnhxPz80Fj+aIF4/lGLkPtAhdT+N1kw9ccBiPwY54j4KeHE/AxY8PZogXj85634/0CF1P+wnFT+aIF4/Oet+PwrG2z4/NBY/nm9aPwCb6T5bkNY+9iuCPJogXj+UYuQ+CMbbPgUvpzueb1o/BE98P1uQ1j49cRM/yP1EPYANAzztcwg/bHUsP6B9hz12D+A+OoJqP2N9KD/J/UQ9BjniPnt4az9sdSw/oH2HPYA/SDwwawk/Y30oPylK4D4AAIA/6JCaOz80Fj+eb1o/BE98P1uQ1j49cRM/0wtdPwAAgD8Kxts+PzQWP5KC5T4ET3w/av5zPD1xEz9cfKw9BjniPs2UwT32obE9oH2HPYA/SDz2OaQ9t0MAP1x8rD2ADQM8zZTBPRJOAT+gfYc9dg/gPvY5pD2J/bk90wtdPwQ54j4Ixts+BS+nO5KC5T7+muk+av5zPPYrgjwpSuA+BjniPgWRmjsFL6c7nm9aPwCb6T5bkNY+9iuCPBB36z7FVHk/XxXZPLtKED+SguU+AJvpPmr+czz2K4I8EHfrPn6P7z5fFdk8QfzmPJKC5T4ET3w/av5zPD1xEz8="),
+"format": 34359742519,
+"index_count": 102,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0AMAAxADIAMAAzADEANAA1ADYANAA3ADUAOAA5ADoAOAA7ADkAPAA9AD4APAA/AD0AQABBAEIAQABDAEEA"),
+"material": SubResource("StandardMaterial3D_0tl4x"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 68,
+"vertex_data": PackedByteArray("6CYcvgAAgL8AAIC/CcKNPQAAgL8AAIA/CcKNPQAAgL8AAIC/6CYcvgAAgL8AAIA/6CYcvgAAgL8AAIA/6CYcviJbyT8AAIC/6CYcviJbyT8AAIA/6CYcvgAAgL8AAIC/im19PbhBYb+4QWG/jpPRPaf7br+n+24/im19PbhBYb+4QWE/jpPRPaf7br+n+26/im19Pf77uT+4QWE/jpPRPfXYwD+n+26/im19Pf77uT+4QWG/jpPRPfXYwD+n+24/6CYcvgAAgL8AAIC/CcKNPSJbyT8AAIC/6CYcviJbyT8AAIC/CcKNPQAAgL8AAIC/CcKNPQAAgL8AAIA/6CYcviJbyT8AAIA/CcKNPSJbyT8AAIA/6CYcvgAAgL8AAIA/CcKNPSJbyT8AAIC/6CYcviJbyT8AAIA/6CYcviJbyT8AAIC/CcKNPSJbyT8AAIA/im19PbhBYb+4QWE/jpPRPfXYwD+n+24/im19Pf77uT+4QWE/jpPRPaf7br+n+24/jpPRPfXYwD+n+26/lUPoPQ8Ee78PBHu/jpPRPaf7br+n+26/lUPoPSrdxj8QBHu/lUPoPSrdxj8QBHu/CcKNPQAAgL8AAIC/lUPoPQ8Ee78PBHu/CcKNPSJbyT8AAIC/CcKNPSJbyT8AAIA/lUPoPQ8Ee78PBHs/CcKNPQAAgL8AAIA/lUPoPSrdxj8QBHs/lUPoPSrdxj8QBHs/jpPRPaf7br+n+24/lUPoPQ8Ee78PBHs/jpPRPfXYwD+n+24/CcKNPSJbyT8AAIC/lUPoPSrdxj8QBHs/CcKNPSJbyT8AAIA/lUPoPSrdxj8QBHu/lUPoPSrdxj8QBHu/jpPRPfXYwD+n+24/lUPoPSrdxj8QBHs/jpPRPfXYwD+n+26/CcKNPQAAgL8AAIA/lUPoPQ8Ee78PBHu/CcKNPQAAgL8AAIC/lUPoPQ8Ee78PBHs/lUPoPQ8Ee78PBHs/jpPRPaf7br+n+26/lUPoPQ8Ee78PBHu/jpPRPaf7br+n+24/im19Pf77uT+4QWG/jpPRPaf7br+n+26/im19PbhBYb+4QWG/jpPRPfXYwD+n+26//38AAAAA/7//fwAAAAD/v/9/AAAAAP+//38AAAAA/78AAP9//////wAA/3//////AAD/f/////8AAP9///////LIC7f/f/+/8sgLt/9//7/yyAu3/3//v/LIC7f/f/+/8sjzSP9//7/yyPNI/3//v/LI80j/f/+/8sjzSP9//7//////////v/////////+//////////7//////////v/9//38AAP+//3//fwAA/7//f/9/AAD/v/9//38AAP+//3///////7//f///////v/9///////+//3///////7///wu3C7f/v///C7cLt/+///8Ltwu3/7///wu3C7f/v5Xn/3+VZ/+/lef/f5Vn/7+V5/9/lWf/v5Xn/3+VZ/+////Z2NnY/7///9nY2dj/v///2djZ2P+////Z2NnY/78lp/9/JSf/vyWn/38lJ/+/Jaf/fyUn/78lp/9/JSf/v///aZhpmP+///9pmGmY/7///2mYaZj/v///aZhpmP+/JafZ2NnYbKwlp9nY2dhsrCWn2djZ2GysJafZ2NnYbKyV55Vn/3//v5XnlWf/f/+/leeVZ/9//7+V55Vn/3//vyWnJSclJ2ysJaclJyUnbKwlpyUnJSdsrCWnJSclJ2ysledpmP9//7+V52mY/3//v5XnaZj/f/+/ledpmP9//7/yyP9/80j/v/LI/3/zSP+/8sj/f/NI/7/yyP9/80j/vw==")
+}, {
+"aabb": AABB(0.061872, -0.879909, -0.879909, 1e-05, 2.33291, 1.75982),
+"attribute_data": PackedByteArray("ACBdOgDvdjsnGO8+orF+P7jIfz8OCX8/6JCaO3MKHj9AnoU7CJt/P+iQmjuisX4/wvR+PwDsyTonGO8+cwoePw=="),
+"format": 34359742519,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_m514l"),
+"name": "Material.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("im19PbhBYb+4QWG/im19Pf77uT+4QWE/im19Pf77uT+4QWG/im19PbhBYb+4QWE/////f/9/L8D///9//38vwP///3//fy/A////f/9/L8A=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_q3cqu")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5bxij"]
+resource_name = "Material.003"
+cull_mode = 2
+albedo_texture = ExtResource("4_yjo7n")
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_am20v"]
+_surfaces = [{
+"aabb": AABB(-0.152492, -1, -1, 0.265902, 2.57309, 2),
+"format": 34359742465,
+"index_count": 102,
+"index_data": PackedByteArray("AAABAAIAAAACAAMAAAAEAAEABAAAAAUAAAADAAUABAAFAAYAAwAGAAUAAQAEAAYAAwAHAAYAAQAGAAcACAADAAIAAQAJAAIACAACAAkABwAKAAEAAQAKAAkAAwALAAcABwALAAoAAwAIAAsACgAMAAkADQAIAAkADQAJAAwACAAOAAsACAANAA4ACwAPAAoACgAPAAwACwAOAA8AEAANAAwAEQANABAAEQAOAA0AEAAMABIAEgAMAA8AEwAOABEAEgAPABMAEwAPAA4A"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("6CYcvgAAgL8AAIC/CcKNPQAAgL8AAIA/CcKNPQAAgL8AAIC/CcKNPSJbyT8AAIC/6CYcvgAAgL8AAIA/6CYcviJbyT8AAIC/6CYcviJbyT8AAIA/CcKNPSJbyT8AAIA/lUPoPSrdxj8QBHu/lUPoPQ8Ee78PBHu/lUPoPQ8Ee78PBHs/lUPoPSrdxj8QBHs/jpPRPaf7br+n+26/jpPRPfXYwD+n+26/jpPRPfXYwD+n+24/jpPRPaf7br+n+24/im19Pf77uT+4QWG/im19Pf77uT+4QWE/im19PbhBYb+4QWG/im19PbhBYb+4QWE/")
+}, {
+"aabb": AABB(0.061872, -0.879909, -0.879909, 1e-05, 2.33291, 1.75982),
+"format": 34359742465,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "Material.003",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("im19PbhBYb+4QWG/im19Pf77uT+4QWE/im19Pf77uT+4QWG/im19PbhBYb+4QWE/")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_m7642"]
+resource_name = "poster_Cube_002"
+lightmap_size_hint = Vector2i(106, 98)
+_surfaces = [{
+"aabb": AABB(-0.152492, -1, -1, 0.265902, 2.57309, 2),
+"attribute_data": PackedByteArray("oH0HPoANAzx+Dik+Xk4BP1x8rD0GOeI+zZTBPfahsT1cfKw9gA0DPM2UwT0STgE/oH0HPgY54j5+Dik+UqSxPQAAAAAGOeI+pCZYP07BCz+aIN4+AACAP59D6j4FL6c7AAAAAAAAgD+kJlg/BS+nO5og3j4GOeI+n0PqPk7BCz8Qd+s+fo/vPl8V2TxB/OY8nm9aPwCb6T5bkNY+9iuCPF91Vz9+j+8++J7QPkH85jySguU+/prpPmr+czz2K4I8X3VXP8VUeT/4ntA+u0oQP5KC5T4ET3w/av5zPD1xEz8Qd+s+xVR5P18V2Ty7ShA/nm9aPwRPfD9bkNY+PXETP00Qbz8GOeI+zcp+PyVJUj8pYHs/AACAP92V/T5u1WU/TRBvPwAAgD+8lf0+JUlSPyhgez8GOeI+3sp+P27VZT9xwGI/BjniPgp4cT8DFjw9ThBvPwAAgD9vZV8/LjQWP3DAYj8AAIA/CnhxPz80Fj9OEG8/BjniPm9lXz/mFDw9yP1EPYANAzztcwg/bHUsPwAAAAAGOeI+wXhrPwAAQD8AAAAAgA0DPDN0CD8AAEA/yf1EPQY54j57eGs/bHUsP191Vz9+j+8++J7QPkH85jyeb1o/BE98P1uQ1j49cRM/X3VXP8VUeT/4ntA+u0oQP55vWj8Am+k+W5DWPvYrgjySguU+BE98P2r+czw9cRM/myDePpRi5D4FkZo7BS+nO5KC5T4Am+k+av5zPPYrgjyaIN4+Oet+P+iQmjs/NBY/AACAPznrfj95hf8+wctpPyhgez8GOeI+3sp+P27VZT8AAIA/lGLkPsvSfT/By2k/KWB7PwAAgD/dlf0+btVlP3DAYj8AAIA/CnhxPz80Fj+aIF4/lGLkPtAhdT+N1kw9ccBiPwY54j4KeHE/AxY8PZogXj85634/0CF1P+wnFT+aIF4/Oet+PwrG2z4/NBY/nm9aPwCb6T5bkNY+9iuCPJogXj+UYuQ+CMbbPgUvpzueb1o/BE98P1uQ1j49cRM/yP1EPYANAzztcwg/bHUsP6B9hz12D+A+OoJqP2N9KD/J/UQ9BjniPnt4az9sdSw/oH2HPYA/SDwwawk/Y30oPylK4D4AAIA/6JCaOz80Fj+eb1o/BE98P1uQ1j49cRM/0wtdPwAAgD8Kxts+PzQWP5KC5T4ET3w/av5zPD1xEz9cfKw9BjniPs2UwT32obE9oH2HPYA/SDz2OaQ9t0MAP1x8rD2ADQM8zZTBPRJOAT+gfYc9dg/gPvY5pD2J/bk90wtdPwQ54j4Ixts+BS+nO5KC5T7+muk+av5zPPYrgjwpSuA+BjniPgWRmjsFL6c7nm9aPwCb6T5bkNY+9iuCPBB36z7FVHk/XxXZPLtKED+SguU+AJvpPmr+czz2K4I8EHfrPn6P7z5fFdk8QfzmPJKC5T4ET3w/av5zPD1xEz8="),
+"format": 34359742519,
+"index_count": 102,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0AMAAxADIAMAAzADEANAA1ADYANAA3ADUAOAA5ADoAOAA7ADkAPAA9AD4APAA/AD0AQABBAEIAQABDAEEA"),
+"material": SubResource("StandardMaterial3D_0tl4x"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 68,
+"vertex_data": PackedByteArray("6CYcvgAAgL8AAIC/CcKNPQAAgL8AAIA/CcKNPQAAgL8AAIC/6CYcvgAAgL8AAIA/6CYcvgAAgL8AAIA/6CYcviJbyT8AAIC/6CYcviJbyT8AAIA/6CYcvgAAgL8AAIC/im19PbhBYb+4QWG/jpPRPaf7br+n+24/im19PbhBYb+4QWE/jpPRPaf7br+n+26/im19Pf77uT+4QWE/jpPRPfXYwD+n+26/im19Pf77uT+4QWG/jpPRPfXYwD+n+24/6CYcvgAAgL8AAIC/CcKNPSJbyT8AAIC/6CYcviJbyT8AAIC/CcKNPQAAgL8AAIC/CcKNPQAAgL8AAIA/6CYcviJbyT8AAIA/CcKNPSJbyT8AAIA/6CYcvgAAgL8AAIA/CcKNPSJbyT8AAIC/6CYcviJbyT8AAIA/6CYcviJbyT8AAIC/CcKNPSJbyT8AAIA/im19PbhBYb+4QWE/jpPRPfXYwD+n+24/im19Pf77uT+4QWE/jpPRPaf7br+n+24/jpPRPfXYwD+n+26/lUPoPQ8Ee78PBHu/jpPRPaf7br+n+26/lUPoPSrdxj8QBHu/lUPoPSrdxj8QBHu/CcKNPQAAgL8AAIC/lUPoPQ8Ee78PBHu/CcKNPSJbyT8AAIC/CcKNPSJbyT8AAIA/lUPoPQ8Ee78PBHs/CcKNPQAAgL8AAIA/lUPoPSrdxj8QBHs/lUPoPSrdxj8QBHs/jpPRPaf7br+n+24/lUPoPQ8Ee78PBHs/jpPRPfXYwD+n+24/CcKNPSJbyT8AAIC/lUPoPSrdxj8QBHs/CcKNPSJbyT8AAIA/lUPoPSrdxj8QBHu/lUPoPSrdxj8QBHu/jpPRPfXYwD+n+24/lUPoPSrdxj8QBHs/jpPRPfXYwD+n+26/CcKNPQAAgL8AAIA/lUPoPQ8Ee78PBHu/CcKNPQAAgL8AAIC/lUPoPQ8Ee78PBHs/lUPoPQ8Ee78PBHs/jpPRPaf7br+n+26/lUPoPQ8Ee78PBHu/jpPRPaf7br+n+24/im19Pf77uT+4QWG/jpPRPaf7br+n+26/im19PbhBYb+4QWG/jpPRPfXYwD+n+26//38AAAAA/7//fwAAAAD/v/9/AAAAAP+//38AAAAA/78AAP9//////wAA/3//////AAD/f/////8AAP9///////LIC7f/f/+/8sgLt/9//7/yyAu3/3//v/LIC7f/f/+/8sjzSP9//7/yyPNI/3//v/LI80j/f/+/8sjzSP9//7//////////v/////////+//////////7//////////v/9//38AAP+//3//fwAA/7//f/9/AAD/v/9//38AAP+//3///////7//f///////v/9///////+//3///////7///wu3C7f/v///C7cLt/+///8Ltwu3/7///wu3C7f/v5Xn/3+VZ/+/lef/f5Vn/7+V5/9/lWf/v5Xn/3+VZ/+////Z2NnY/7///9nY2dj/v///2djZ2P+////Z2NnY/78lp/9/JSf/vyWn/38lJ/+/Jaf/fyUn/78lp/9/JSf/v///aZhpmP+///9pmGmY/7///2mYaZj/v///aZhpmP+/JafZ2NnYbKwlp9nY2dhsrCWn2djZ2GysJafZ2NnYbKyV55Vn/3//v5XnlWf/f/+/leeVZ/9//7+V55Vn/3//vyWnJSclJ2ysJaclJyUnbKwlpyUnJSdsrCWnJSclJ2ysledpmP9//7+V52mY/3//v5XnaZj/f/+/ledpmP9//7/yyP9/80j/v/LI/3/zSP+/8sj/f/NI/7/yyP9/80j/vw==")
+}, {
+"aabb": AABB(0.061872, -0.879909, -0.879909, 1e-05, 2.33291, 1.75982),
+"attribute_data": PackedByteArray("BXC2O0NBfz8nGO8+orF+Px6Tfj8Auz476JCaO3MKHj8CBX8/6oB+P+iQmjuisX4/l/56OwCLvzsnGO8+cwoePw=="),
+"format": 34359742519,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_5bxij"),
+"name": "Material.003",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("im19PbhBYb+4QWG/im19Pf77uT+4QWE/im19Pf77uT+4QWG/im19PbhBYb+4QWE/////f0iA//////9/SID//////39IgP//////f0iA//8=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_am20v")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pw6c8"]
 resource_name = "Material.006"
@@ -3399,6 +3658,32 @@ fog_sky_affect = 0.495
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_6q6xp")
 
+[node name="surreal" type="Node3D" parent="."]
+transform = Transform3D(-2.40676, 0, -0.369749, 0, 2.435, 0, 0.369749, 0, -2.40676, -38.6565, 0, -8.45281)
+
+[node name="Cube_001" type="MeshInstance3D" parent="surreal"]
+transform = Transform3D(-0.400655, 0, 0.0656601, 0, 0.406, 0, -0.0656601, 0, -0.400655, -0.332561, 1.15487, -3.59209)
+mesh = SubResource("ArrayMesh_wl0kc")
+skeleton = NodePath("")
+
+[node name="poster" type="Node3D" parent="."]
+transform = Transform3D(0.35, 0, 0, 0, 0.35, 0, 0, 0, 0.35, -37.5085, 3.83667, 3.2637)
+
+[node name="Cube" type="MeshInstance3D" parent="poster"]
+transform = Transform3D(6.336, 0, 0, 0, -2.76955e-07, 6.336, 0, -6.336, -2.76955e-07, -0.0529861, 0, -8.03899)
+mesh = SubResource("ArrayMesh_ob66y")
+skeleton = NodePath("")
+
+[node name="Cube_001" type="MeshInstance3D" parent="poster"]
+transform = Transform3D(3.96053, 0, 0, 0, 3.96053, 0, 0, 0, 3.96053, -0.535225, -1.39031, 18.4012)
+mesh = SubResource("ArrayMesh_why2y")
+skeleton = NodePath("")
+
+[node name="Cube_002" type="MeshInstance3D" parent="poster"]
+transform = Transform3D(-1.7312e-07, -3.96053, -1.7312e-07, 0, -1.7312e-07, 3.96053, -3.96053, 1.7312e-07, 7.56733e-15, 13.1734, -1.22666, 30.2014)
+mesh = SubResource("ArrayMesh_m7642")
+skeleton = NodePath("")
+
 [node name="props" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.54186, 0, 0)
 
@@ -3433,7 +3718,7 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_5jrup")
 
 [node name="Node3D" type="Node3D" parent="."]
-transform = Transform3D(0.977257, 0, 0.212058, 0, 1, 0, -0.212058, 0, 0.977257, -34.8989, 2.12501, 0.25225)
+transform = Transform3D(0.977257, 0, 0.212058, 0, 1, 0, -0.212058, 0, 0.977257, -34.8989, 1.88274, 0.25225)
 script = ExtResource("6_iss77")
 
 [node name="book_open" type="MeshInstance3D" parent="Node3D"]
@@ -3454,8 +3739,118 @@ skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Node3D/book_closed"]
 script = ExtResource("3_g6g5t")
+dialouge = null
+prompt_action = null
+prompt_message = null
+prompt_key_override = null
+override_text = null
+_hasDialogue = null
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/book_closed/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_pen6x")
+
+[node name="Node3D2" type="Node3D" parent="."]
+transform = Transform3D(0.982294, 0, 0.187347, 0, 1, 0, -0.187347, 0, 0.982294, -35.8265, 1.89625, 9.83409)
+script = ExtResource("6_iss77")
+
+[node name="book_open" type="MeshInstance3D" parent="Node3D2"]
+transform = Transform3D(0.124418, 0.398377, -0.0921353, -0.407969, 0.127414, -3.0295e-09, 0.0274667, 0.087946, 0.417353, 0, 0, 0)
+visible = false
+mesh = SubResource("ArrayMesh_fk4g1")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D2/book_open"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D2/book_open/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cdgqo")
+
+[node name="book_closed" type="MeshInstance3D" parent="Node3D2"]
+transform = Transform3D(0.107366, 0.108483, 0.39948, -0.412573, -0.00556373, 0.112396, 0.0337095, -0.413619, 0.103263, -0.0385704, 0, 0.202217)
+mesh = SubResource("ArrayMesh_4l7br")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D2/book_closed"]
+script = ExtResource("10_wncyr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D2/book_closed/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_pen6x")
+
+[node name="Node3D5" type="Node3D" parent="."]
+transform = Transform3D(-0.961214, 0, -0.275805, 0, 1, 0, 0.275805, 0, -0.961214, -10.4083, 1.89625, 21.1281)
+script = ExtResource("6_iss77")
+
+[node name="book_open" type="MeshInstance3D" parent="Node3D5"]
+transform = Transform3D(0.124418, 0.398377, -0.0921353, -0.407969, 0.127414, -3.0295e-09, 0.0274667, 0.087946, 0.417353, 0, 0, 0)
+visible = false
+mesh = SubResource("ArrayMesh_fk4g1")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D5/book_open"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D5/book_open/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cdgqo")
+
+[node name="book_closed" type="MeshInstance3D" parent="Node3D5"]
+transform = Transform3D(0.107366, 0.108483, 0.39948, -0.412573, -0.00556373, 0.112396, 0.0337095, -0.413619, 0.103263, -0.0385704, 0, 0.202217)
+mesh = SubResource("ArrayMesh_4l7br")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D5/book_closed"]
+script = ExtResource("10_wncyr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D5/book_closed/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_pen6x")
+
+[node name="Node3D3" type="Node3D" parent="."]
+transform = Transform3D(-0.0378122, 0, 0.999285, 0, 1, 0, -0.999285, 0, -0.0378122, -33.2542, 1.82667, 12.6053)
+script = ExtResource("6_iss77")
+
+[node name="book_open" type="MeshInstance3D" parent="Node3D3"]
+transform = Transform3D(0.124418, 0.398377, -0.0921353, -0.407969, 0.127414, -3.0295e-09, 0.0274667, 0.087946, 0.417353, 0, 0, 0)
+visible = false
+mesh = SubResource("ArrayMesh_fk4g1")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D3/book_open"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D3/book_open/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cdgqo")
+
+[node name="book_closed" type="MeshInstance3D" parent="Node3D3"]
+transform = Transform3D(0.107366, 0.108483, 0.39948, -0.412573, -0.00556373, 0.112396, 0.0337095, -0.413619, 0.103263, -0.00880051, 0, 0.232586)
+mesh = SubResource("ArrayMesh_4l7br")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D3/book_closed"]
+script = ExtResource("10_wncyr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D3/book_closed/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_pen6x")
+
+[node name="Node3D4" type="Node3D" parent="."]
+transform = Transform3D(-0.0378122, 0, 0.999285, 0, 1, 0, -0.999285, 0, -0.0378122, -26.3909, 1.82667, 12.6053)
+script = ExtResource("6_iss77")
+
+[node name="book_open" type="MeshInstance3D" parent="Node3D4"]
+transform = Transform3D(0.124418, 0.398377, -0.0921353, -0.407969, 0.127414, -3.0295e-09, 0.0274667, 0.087946, 0.417353, 0, 0, 0)
+visible = false
+mesh = SubResource("ArrayMesh_fk4g1")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D4/book_open"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D4/book_open/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cdgqo")
+
+[node name="book_closed" type="MeshInstance3D" parent="Node3D4"]
+transform = Transform3D(0.107366, 0.108483, 0.39948, -0.412573, -0.00556373, 0.112396, 0.0337095, -0.413619, 0.103263, -0.00880051, 0, 0.232586)
+mesh = SubResource("ArrayMesh_4l7br")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D4/book_closed"]
+script = ExtResource("10_wncyr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D4/book_closed/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_pen6x")
 
 [node name="Lights" type="Node3D" parent="."]
@@ -3472,7 +3867,7 @@ skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_i6j5g")
 
 [node name="Cylinder_012" type="MeshInstance3D" parent="Lights"]
-transform = Transform3D(0.0479163, 0, 0, 0, -0.00013336, -0.0479161, 0, 0.0479161, -0.00013336, -33.7897, 6.66694, -0.132858)
+transform = Transform3D(0.0428022, -5.99482e-05, -0.0215393, -0.0215394, -0.000119126, -0.042802, 0, 0.0479161, -0.00013336, -30.6164, 6.23501, -0.132858)
 mesh = SubResource("ArrayMesh_xb05w")
 skeleton = NodePath("")
 
@@ -3482,7 +3877,7 @@ skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_i6j5g")
 
 [node name="Cylinder_013" type="MeshInstance3D" parent="Lights"]
-transform = Transform3D(0.000222454, -0.0479156, 0.000133358, 0, -0.00013336, -0.0479161, 0.0479158, 0.000222453, -6.19129e-07, -29.7321, 6.66694, -20.1873)
+transform = Transform3D(0.000222454, -0.0479156, 0.000133358, 0, -0.00013336, -0.0479161, 0.0479158, 0.000222453, -6.19129e-07, -30.139, 6.66694, -20.1873)
 mesh = SubResource("ArrayMesh_xb05w")
 skeleton = NodePath("")
 
@@ -3536,6 +3931,7 @@ mesh = SubResource("ArrayMesh_xb05w")
 skeleton = NodePath("")
 
 [node name="Cylinder_001" type="MeshInstance3D" parent="Lights/Cylinder_017"]
+transform = Transform3D(1, 0, -1.81899e-12, 0, 1, -2.32831e-10, 1.81899e-12, -2.32831e-10, 1, -0.085144, 9.99774, -0.0278244)
 mesh = SubResource("ArrayMesh_pen6x")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_i6j5g")
@@ -3550,7 +3946,7 @@ spot_attenuation = 1.29
 spot_angle = 48.07
 
 [node name="Cylinder_018" type="MeshInstance3D" parent="Lights"]
-transform = Transform3D(-0.0479146, -0.000408105, 1.13583e-06, 0, -0.00013336, -0.0479161, 0.000408107, -0.0479144, 0.000133355, -5.77972, 5.74892, 21.3761)
+transform = Transform3D(-0.0479146, -0.000408105, 1.13583e-06, 0, -0.00013336, -0.0479161, 0.000408107, -0.0479144, 0.000133355, -5.77972, 5.74892, 21.0721)
 mesh = SubResource("ArrayMesh_xb05w")
 skeleton = NodePath("")
 
@@ -3651,7 +4047,7 @@ mesh = SubResource("ArrayMesh_80uvc")
 skeleton = NodePath("")
 
 [node name="roof-hall_001" type="MeshInstance3D" parent="capstone_blockout2"]
-transform = Transform3D(-0.0162398, 0, 5.11542, 0, 5.11545, 0, -5.11542, 0, -0.0162398, -32.1674, 9.70551, -10.1606)
+transform = Transform3D(-0.0162398, 0, 5.11542, 0, 5.11545, 0, -5.11542, 0, -0.0162398, -32.3366, 9.70551, -10.1606)
 mesh = SubResource("ArrayMesh_5fbxh")
 skeleton = NodePath("")
 
@@ -3909,7 +4305,7 @@ mesh = SubResource("ArrayMesh_8tqn4")
 skeleton = NodePath("")
 
 [node name="floors_004" type="MeshInstance3D" parent="capstone_blockout2"]
-transform = Transform3D(-0.0131414, 0, -5.42267, 0, 5.42269, 0, 5.42267, 0, -0.0131414, -32.3466, 0.858978, -17.6436)
+transform = Transform3D(-0.0131414, 0, -5.42267, 0, 5.42269, 0, 5.42267, 0, -0.0131414, -32.5158, 0.858978, -17.6436)
 mesh = SubResource("ArrayMesh_crerq")
 skeleton = NodePath("")
 
@@ -3919,7 +4315,7 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_k67gd")
 
 [node name="walls_006" type="MeshInstance3D" parent="capstone_blockout2"]
-transform = Transform3D(0, 0, -0.657833, 0, 0.657833, 0, 0.657833, 0, 0, -32.3127, 4.8192, -14.9487)
+transform = Transform3D(0, 0, -0.657833, 0, 0.657833, 0, 0.657833, 0, 0, -32.4819, 4.8192, -14.9487)
 mesh = SubResource("ArrayMesh_wjspa")
 skeleton = NodePath("")
 
@@ -3929,12 +4325,12 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_p7y5u")
 
 [node name="room-1-baseboards_003" type="MeshInstance3D" parent="capstone_blockout2"]
-transform = Transform3D(0.657833, 0, 0, 0, 0.657833, 0, 0, 0, 0.667764, -32.3209, 1.52332, -19.4659)
+transform = Transform3D(0.657833, 0, 0, 0, 0.657833, 0, 0, 0, 0.667764, -32.4901, 1.52332, -19.4659)
 mesh = SubResource("ArrayMesh_bxc71")
 skeleton = NodePath("")
 
 [node name="walls_007" type="MeshInstance3D" parent="capstone_blockout2"]
-transform = Transform3D(0, 0, 0.228356, 0, 0.228356, 0, -0.228356, 0, 0, -32.2579, 3.28121, -19.4799)
+transform = Transform3D(0, 0, 0.228356, 0, 0.228356, 0, -0.228356, 0, 0, -32.4271, 3.28121, -19.4799)
 mesh = SubResource("ArrayMesh_ud3f0")
 skeleton = NodePath("")
 
@@ -3944,12 +4340,12 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_6en1a")
 
 [node name="hall-baseboards_001" type="MeshInstance3D" parent="capstone_blockout2"]
-transform = Transform3D(0.657833, 0, 0, 0, 0.657833, 0, 0, 0, 0.657833, -32.2984, 1.51295, -12.2537)
+transform = Transform3D(0.657833, 0, 0, 0, 0.657833, 0, 0, 0, 0.657833, -32.4676, 1.51295, -12.2537)
 mesh = SubResource("ArrayMesh_wkc7p")
 skeleton = NodePath("")
 
 [node name="pillars_011" type="MeshInstance3D" parent="capstone_blockout2"]
-transform = Transform3D(0.226109, 0, 0, 0, 0.212979, 0, 0, 0, 0.226109, -32.3011, 2.06513, -14.787)
+transform = Transform3D(0.226109, 0, 0, 0, 0.212979, 0, 0, 0, 0.226109, -32.4703, 2.06513, -14.787)
 mesh = SubResource("ArrayMesh_kguhc")
 skeleton = NodePath("")
 
@@ -4024,7 +4420,7 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_1jsvb")
 
 [node name="pillars_014" type="MeshInstance3D" parent="capstone_blockout2"]
-transform = Transform3D(0, 0, 0.250618, 0, 0.250618, 0, -0.250618, 0, 0, -2.64762, 2.2065, 18.065)
+transform = Transform3D(0, 0, 0.250618, 0, 0.250618, 0, -0.250618, 0, 0, -3.1987, 2.2065, 18.065)
 mesh = SubResource("ArrayMesh_4utas")
 skeleton = NodePath("")
 
@@ -4054,7 +4450,7 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_xh68s")
 
 [node name="pillars_016" type="MeshInstance3D" parent="capstone_blockout2"]
-transform = Transform3D(0, 0, 0.250618, 0, 0.250618, 0, -0.250618, 0, 0, -2.7901, 2.18617, 26.711)
+transform = Transform3D(0, 0, 0.250618, 0, 0.250618, 0, -0.250618, 0, 0, -3.34118, 2.18617, 26.711)
 mesh = SubResource("ArrayMesh_6qnb5")
 skeleton = NodePath("")
 
@@ -4145,6 +4541,7 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_q2duy")
 
 [node name="OccluderInstance3D" type="OccluderInstance3D" parent="capstone_blockout2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.169195, 0, 0)
 occluder = SubResource("ArrayOccluder3D_hagc3")
 
 [node name="SpinAnchor3" type="Node3D" parent="."]
@@ -4228,6 +4625,21 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("21_aobyt")
 
+[node name="BookImagePanel2" type="Panel" parent="CanvasLayer"]
+visible = false
+layout_direction = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/BookImagePanel2"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("25_xb05w")
+
 [node name="ReflectionProbe" type="ReflectionProbe" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.781, 3.59568, -8.58292)
 intensity = 0.1
@@ -4296,15 +4708,6 @@ spot_range = 40.849
 spot_attenuation = 1.29
 spot_angle = 48.07
 
-[node name="SpotLight3D11" type="SpotLight3D" parent="SpotLight3D6"]
-transform = Transform3D(1, -2.08507e-07, 2.234e-07, 2.0839e-07, 1, 0.000523417, -2.23509e-07, -0.000523417, 1, -31.8699, -9.36411, 0.0136819)
-light_color = Color(0.950255, 0.789177, 0.562347, 1)
-light_energy = 8.889
-light_bake_mode = 1
-spot_range = 40.849
-spot_attenuation = 1.29
-spot_angle = 48.07
-
 [node name="SpotLight3D11" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 2.23517e-07, 2.08616e-07, -2.08616e-07, 1.78814e-07, 1, 2.23517e-07, -1, 1.78814e-07, -19.8073, 6.11814, 0.0136886)
 light_color = Color(0.950255, 0.789177, 0.562347, 1)
@@ -4324,7 +4727,7 @@ spot_attenuation = 1.2
 spot_angle = 15.46
 
 [node name="SpotLight3D7" type="SpotLight3D" parent="SpotLight3D7"]
-transform = Transform3D(0.0232341, 0.999634, -0.013854, -0.999708, 0.0233225, 0.00625505, 0.00657588, 0.0137046, 0.999884, -21.8862, 10.1194, -0.422026)
+transform = Transform3D(0.0232341, 0.999634, -0.013854, -0.999708, 0.0233225, 0.00625506, 0.00657588, 0.0137046, 0.999884, -22.1143, 10.1194, -0.42735)
 light_color = Color(0.580392, 0.34902, 0.309804, 1)
 light_energy = 14.253
 light_bake_mode = 1
@@ -4333,7 +4736,7 @@ spot_attenuation = 1.2
 spot_angle = 15.46
 
 [node name="SpotLight3D8" type="SpotLight3D" parent="SpotLight3D7"]
-transform = Transform3D(0.0232341, 0.999634, -0.013854, -0.999708, 0.0233225, 0.00625505, 0.00657588, 0.0137046, 0.999884, -21.8083, 6.72011, -0.320285)
+transform = Transform3D(0.0232341, 0.999634, -0.013854, -0.999708, 0.0233225, 0.00625506, 0.00657588, 0.0137046, 0.999884, -22.0364, 6.72011, -0.325609)
 light_color = Color(0.582194, 0.347264, 0.311476, 1)
 light_energy = 14.253
 light_bake_mode = 1
@@ -4342,7 +4745,7 @@ spot_attenuation = 1.2
 spot_angle = 15.46
 
 [node name="SpotLight3D9" type="SpotLight3D" parent="SpotLight3D7"]
-transform = Transform3D(0.0232341, 0.999634, -0.013854, -0.999708, 0.0233225, 0.00625505, 0.00657588, 0.0137046, 0.999884, -21.9669, 13.6374, -0.527288)
+transform = Transform3D(0.0232341, 0.999634, -0.013854, -0.999708, 0.0233225, 0.00625506, 0.00657588, 0.0137046, 0.999884, -22.195, 13.6374, -0.532612)
 light_color = Color(0.580392, 0.34902, 0.309804, 1)
 light_energy = 14.253
 light_bake_mode = 1
@@ -4369,13 +4772,44 @@ spot_attenuation = 1.2
 spot_angle = 15.46
 
 [node name="SpotLight3D12" type="SpotLight3D" parent="."]
-transform = Transform3D(0.771614, 1.40257e-06, 0.636092, -0.636092, 5.30089e-07, 0.771614, 7.45058e-07, -1, 1.30119e-06, -34.4717, 5.77107, -0.235521)
+transform = Transform3D(0.580746, 1.49197e-06, 0.814085, -0.814085, 1.49118e-07, 0.580746, 7.45058e-07, -1, 1.30119e-06, -33.2553, 5.77107, -0.235521)
 light_color = Color(1, 0.977419, 0.80779, 1)
 light_energy = 13.505
+light_bake_mode = 1
 shadow_enabled = true
 spot_range = 40.849
-spot_attenuation = 1.6
+spot_attenuation = 1.41
 spot_angle = 50.12
+
+[node name="SpotLight3D13" type="SpotLight3D" parent="."]
+transform = Transform3D(0.456089, 1.49779e-06, 0.889934, -0.889934, -6.95942e-08, 0.456089, 7.45058e-07, -1, 1.30119e-06, -32.5237, 5.82775, 9.65678)
+light_color = Color(1, 0.977419, 0.80779, 1)
+light_energy = 13.505
+light_bake_mode = 1
+shadow_enabled = true
+spot_range = 40.849
+spot_attenuation = 1.56
+spot_angle = 29.83
+
+[node name="SpotLight3D14" type="SpotLight3D" parent="."]
+transform = Transform3D(0.038044, -0.997852, 0.0533301, -0.827287, -0.00151694, 0.561778, -0.56049, -0.0654915, -0.825568, -26.5464, 5.77107, 9.65678)
+light_color = Color(1, 0.977419, 0.80779, 1)
+light_energy = 13.505
+light_bake_mode = 1
+shadow_enabled = true
+spot_range = 40.849
+spot_attenuation = 1.56
+spot_angle = 35.34
+
+[node name="SpotLight3D15" type="SpotLight3D" parent="."]
+transform = Transform3D(0.038044, -0.997852, 0.0533301, -0.827287, -0.00151694, 0.561778, -0.56049, -0.0654915, -0.825568, -33.1473, 5.77107, 9.65678)
+light_color = Color(1, 0.977419, 0.80779, 1)
+light_energy = 13.505
+light_bake_mode = 1
+shadow_enabled = true
+spot_range = 40.849
+spot_attenuation = 1.56
+spot_angle = 35.34
 
 [node name="SpotLight3D19" type="SpotLight3D" parent="."]
 transform = Transform3D(0.7841, -0.619913, -0.0299071, -0.271813, -0.386326, 0.881402, -0.557947, -0.682979, -0.471418, -6.94248, 5.6142, 28.0468)

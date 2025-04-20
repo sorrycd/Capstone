@@ -8,7 +8,7 @@ func _physics_process(delta: float) -> void:
 	if is_colliding():
 		var collider = get_collider()
 		
-		if collider is Interactable:
+		if collider is Interactable or collider is Interactable2:
 			if collider.prompt_action == "Interact":
 				# Prompt Logic
 				if Prompt.text == collider.get_prompt()+ " ["+collider.get_key()+"]":
@@ -30,3 +30,4 @@ func _physics_process(delta: float) -> void:
 				Prompt.text = collider.get_prompt()
 	else:
 		Prompt.text = ""
+		
