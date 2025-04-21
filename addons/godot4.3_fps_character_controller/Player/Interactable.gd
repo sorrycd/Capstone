@@ -17,6 +17,7 @@ var _dialogue_parsed : Dictionary
 var _dialogue_index : int = 1
 var book_opened := false
 var input_blocked := false
+var recently_closed := false
 
 # Mesh refs
 var book_closed_mesh: Node = null
@@ -39,6 +40,8 @@ func get_prompt() -> String:
 	return prompt_message
 
 func Interact(body) -> void:
+	if recently_closed:
+		return
 	var book_ui = get_tree().get_root().find_child("BookImagePanel", true, false)
 	if not book_ui:
 		printerr("Book UI not found.")
@@ -62,3 +65,10 @@ func Interact(body) -> void:
 	var player = get_tree().get_first_node_in_group("player")
 	if player:
 		player.book_ui_open = book_opened
+		
+func _input(event):
+	if book_opened and event.is_action_pressed("Interact") and not recently_closed:
+		Interact(null)
+		recently_closed = true
+		await get_tree().create_timer(0.2).timeout
+		recently_closed = false
