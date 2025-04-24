@@ -2,6 +2,8 @@ class_name Interactable extends Node
 
 signal interacted(body)
 
+@onready var opensound := get_parent().get_parent().get_node_or_null("opensound")
+
 @export_subgroup("Dialogue")
 @export_file("*.json") var dialouge : String
 
@@ -54,6 +56,9 @@ func Interact(body) -> void:
 		book_opened = true
 		book_ui.visible = true
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		
+		if opensound:
+			opensound.play()
 	else:
 		print("📕 Closing the book...")
 		if book_closed_mesh: book_closed_mesh.visible = true

@@ -6,6 +6,9 @@ class_name Player extends CharacterBody3D
 @export var Jump_Velocity: float = 4.5
 @export var Wall_Jump_Velocity: Vector3 = Vector3(0, 6.5, 0)
 @export var PlayerInventory: Array[Dictionary] = []
+@export var step_interval := 0.4 #for audio distance between steps
+@export var walk_step_interval := 0.45 #for audio distance between steps
+@export var sprint_step_interval := 0.25  # Faster rhythm when sprinting
 
 @export_category("Inputs")
 @export var InputDictionary: Dictionary = {
@@ -33,6 +36,7 @@ class_name Player extends CharacterBody3D
 @onready var ltilt: Marker3D = $Tilt/LTilt
 @onready var rtilt: Marker3D = $Tilt/RTilt
 @onready var flashlight: SpotLight3D = $Head/SpotLight3D
+@onready var walk_sound := $walk
 
 var direction: Vector3 = Vector3.ZERO
 var Camera_Inp: Vector2 = Vector2()
@@ -42,6 +46,9 @@ var _isMouseCaptured: bool = true
 var can_wall_jump: bool = false
 var flashlight_on := false
 var book_ui_open := false
+var is_walking := false
+var step_timer := 0.0
+var sprinting = Input.is_action_pressed("Sprint")
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -71,6 +78,32 @@ func _process(delta: float) -> void:
 	_handle_movement(delta)
 	_handle_camera_movement(delta)
 	move_and_slide()
+	
+	var moving := (
+		Input.is_action_pressed(InputDictionary["Forward"]) or
+		Input.is_action_pressed(InputDictionary["Backward"]) or
+		Input.is_action_pressed(InputDictionary["Left"]) or
+		Input.is_action_pressed(InputDictionary["Right"])
+	)
+
+	var sprinting := Input.is_action_pressed(InputDictionary["Sprint"])
+
+	step_timer -= delta
+
+	if moving and is_on_floor():
+		var interval := walk_step_interval
+		if sprinting:
+			interval = sprint_step_interval
+
+		if step_timer <= 0.0:
+			if sprinting:
+				walk_sound.pitch_scale = randf_range(1.1, 1.2)
+			else:
+				walk_sound.pitch_scale = randf_range(0.9, 1.1)
+				
+			walk_sound.play()
+			step_timer = interval
+
 
 func _handle_mouse_capture() -> void:
 	if Input.is_action_just_pressed(InputDictionary["Escape"]):
